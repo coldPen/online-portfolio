@@ -1,28 +1,32 @@
 .header {
-  // background: url(../assets/noise.png), radial-gradient(circle at top right, #0f0c29, #302b63, #24243e);
-
   display: flex;
   justify-content: center;
   align-items: center;
 
   &__illustration {
-    display: inline-block;
-    position: relative;
-    width: 100%;
-    padding-bottom: 57.4561403509%;
-    vertical-align: middle;
-    overflow: hidden;
+    width: 50vw;
+    // display: inline-block;
+    // position: relative;
+    // width: 80vw;
+
+    // padding-bottom: 57.4561403509%;
+    // vertical-align: middle;
+    // overflow: hidden;
+
     & > svg {
-      display: inline-block;
-      position: absolute;
-      top: 0;
-      left: 0;
+      // display: inline-block;
+      // position: absolute;
+      // top: 0;
+      // left: 0;
+      border: 1px dashed red;
     }
   }
 
   &__laptop {
+    animation: laptop 10s linear infinite;
   }
 
   &__phone {
+    animation: phone 10s linear infinite;
   }
 }
