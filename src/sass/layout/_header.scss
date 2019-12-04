@@ -3,30 +3,27 @@
   justify-content: center;
   align-items: center;
 
+  padding: 3rem 10rem;
+
+  background-color: $light-blue;
+
+  &__text {
+    margin-right: 4rem;
+  }
+
   &__illustration {
-    width: 50vw;
-    // display: inline-block;
-    // position: relative;
-    // width: 80vw;
+    width: 100%;
 
-    // padding-bottom: 57.4561403509%;
-    // vertical-align: middle;
-    // overflow: hidden;
-
-    & > svg {
-      // display: inline-block;
-      // position: absolute;
-      // top: 0;
-      // left: 0;
-      border: 1px dashed red;
-    }
+    &>svg {}
   }
 
   &__laptop {
-    animation: laptop 10s linear infinite;
+    animation: laptop 12s linear infinite;
+    will-change: transform;
   }
 
   &__phone {
-    animation: phone 10s linear infinite;
+    animation: phone 8s linear infinite;
+    will-change: transform;
   }
 }

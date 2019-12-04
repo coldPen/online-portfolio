@@ -1,0 +1,11 @@
+/* Fonts */
+
+@mixin roboto-black {
+    font-family: $roboto;
+    font-weight: 900;
+}
+
+@mixin nunito-regular {
+    font-family: $nunito;
+    font-weight: 400;
+}
