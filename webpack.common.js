@@ -12,7 +12,11 @@ module.exports = {
       {
         test: /\.(png|jpg|gif|svg)$/,
         loader: "file-loader",
-        options: { name: "[name].[hash].[ext]", outputPath: "assets/" }
+        options: {
+          name: "[name].[hash].[ext]",
+          outputPath: "assets/",
+          esModule: false
+        }
       },
       {
         test: /\.(woff|woff2|eot|ttf|otf)$/,

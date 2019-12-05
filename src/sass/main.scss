@@ -4,12 +4,13 @@
 @import "abstracts/variables", "abstracts/functions", "abstracts/mixins";
 
 // 2. Base stuff
-@import "base/animations", "base/base", "base/fonts", "base/typography", "base/helpers";
+@import "base/animations", "base/base", "base/fonts", "base/typography",
+  "base/helpers";
 
 // 3. Layout-related sections
-@import "layout/header";
 
 // 4. Components
+@import "components/header";
 
 // 5. Page-specific styles
 @import "pages/home";
