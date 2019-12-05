@@ -3,32 +3,26 @@
   grid-template-columns: 14rem 1fr 4rem 1fr 14rem;
   align-items: center;
   row-gap: 1.8rem;
+  grid-template-areas:
+    ".    text .    illu .   "
+    "bott bott bott bott bott";
 
   padding-top: 6rem;
 
-  background: linear-gradient(to bottom, rgba($white-blue, 0.95), rgba($light-blue, 0.95));
+  background: linear-gradient(to bottom,
+      rgba($white-blue, 0.95),
+      rgba($light-blue, 0.95));
 
   &__text {
-    grid-column: 2 / 3;
+    grid-area: text;
   }
 
   &__illustration {
-    grid-column: 4 / 5;
-  }
-
-  &__laptop {
-    animation: laptop 12s linear infinite;
-    will-change: transform;
-  }
-
-  &__phone {
-    animation: phone 8s linear infinite;
-    will-change: transform;
+    grid-area: illu;
   }
 
   &__bottom {
-    grid-row: 2 / 3;
-    grid-column: 1 / 6;
+    grid-area: bott;
 
     transform: translateY(0.5rem);
   }
