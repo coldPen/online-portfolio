@@ -1,10 +1,27 @@
 /* Colors */
-$dark-blue: hsl(205, 100%, 21%);
-$light-blue: hsl(205, 97%, 85%);
-$white-blue: hsl(205, 79%, 92%);
+// Primary colors
+$blue-0: hsl(205, 100%, 21%);
+$blue-1: hsl(205, 87%, 29%);
+$blue-2: hsl(205, 82%, 33%);
+$blue-3: hsl(205, 76%, 39%);
+$blue-4: hsl(205, 67%, 45%);
+$blue-5: hsl(205, 65%, 55%);
+$blue-6: hsl(205, 74%, 65%);
+$blue-7: hsl(205, 84%, 74%);
+$blue-8: hsl(205, 97%, 85%);
+$blue-9: hsl(205, 79%, 92%);
+// Neutral colors
+$blueGrey-0: hsl(209, 61%, 16%);
+$blueGrey-1: hsl(211, 39%, 23%);
+$blueGrey-2: hsl(209, 34%, 30%);
+$blueGrey-3: hsl(209, 28%, 39%);
+$blueGrey-4: hsl(210, 22%, 49%);
+$blueGrey-5: hsl(209, 23%, 60%);
+$blueGrey-6: hsl(211, 27%, 70%);
+$blueGrey-7: hsl(210, 31%, 80%);
+$blueGrey-8: hsl(212, 33%, 89%);
+$blueGrey-9: hsl(210, 36%, 96%);
 
 /* Fonts */
-$roboto: 'Roboto',
-sans-serif;
-$nunito: 'Nunito',
-sans-serif;
+$roboto: "Roboto", sans-serif;
+$nunito: "Nunito", sans-serif;
