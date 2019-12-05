@@ -1,19 +1,19 @@
 @keyframes laptop {
   from {
-    transform: rotate(0deg) translateX(0.8rem) rotate(0deg);
+    transform: rotate(0deg) translateX(0.8rem) translateZ(0) rotate(0deg);
   }
 
   to {
-    transform: rotate(360deg) translateX(0.8rem) rotate(-360deg);
+    transform: rotate(360deg) translateX(0.8rem) translateZ(0) rotate(-360deg);
   }
 }
 
 @keyframes phone {
   from {
-    transform: rotate(0deg) translateX(0.8rem) rotate(0deg);
+    transform: rotate(0deg) translateX(0.8rem) translateZ(0) rotate(0deg);
   }
 
   to {
-    transform: rotate(-360deg) translateX(0.8rem) rotate(360deg);
+    transform: rotate(-360deg) translateX(0.8rem) translateZ(0) rotate(360deg);
   }
 }

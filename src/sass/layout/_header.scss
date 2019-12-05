@@ -1,20 +1,19 @@
 .header {
-  display: flex;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: 14rem 1fr 4rem 1fr 14rem;
   align-items: center;
+  row-gap: 1.8rem;
 
-  padding: 3rem 10rem;
+  padding-top: 6rem;
 
-  background-color: $light-blue;
+  background: linear-gradient(to bottom, rgba($white-blue, 0.95), rgba($light-blue, 0.95));
 
   &__text {
-    margin-right: 4rem;
+    grid-column: 2 / 3;
   }
 
   &__illustration {
-    width: 100%;
-
-    &>svg {}
+    grid-column: 4 / 5;
   }
 
   &__laptop {
@@ -25,5 +24,12 @@
   &__phone {
     animation: phone 8s linear infinite;
     will-change: transform;
+  }
+
+  &__bottom {
+    grid-row: 2 / 3;
+    grid-column: 1 / 6;
+
+    transform: translateY(0.5rem);
   }
 }
