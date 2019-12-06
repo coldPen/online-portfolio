@@ -5,9 +5,9 @@
     ".    text .    illu .   "
     "bott bott bott bott bott";
   align-items: center;
-  row-gap: 1.8rem;
+  row-gap: 3rem;
 
-  padding-top: 6.2rem;
+  padding-top: 3rem;
   background: linear-gradient(to bottom, $blue-9, $blue-8);
 
   &__text {
@@ -17,7 +17,7 @@
   &__illustration {
     grid-area: illu;
 
-    & > img {
+    &>img {
       width: 100%;
     }
   }
@@ -25,50 +25,69 @@
   &__bottom {
     grid-area: bott;
 
-    transform: translateY(1rem);
+    // transform: translateY(1rem);
   }
 }
 
-.react {
-  display: grid;
-  grid-template-columns: 14rem 2fr 4rem 3fr 14rem;
-  grid-template-areas: ". illu . text .";
+.presentation {
+  background: $blueGrey-9;
+  // padding-top: 1rem;
+}
+
+.intro {
+  display: flex;
   align-items: center;
 
-  padding-top: 1.8rem;
-  background-color: $blueGrey-9;
+  padding: 3rem 28rem;
+
+  &__profile {
+    border-radius: 50%;
+    margin-right: 1.6rem;
+    width: 9rem;
+    height: 9rem;
+  }
+
+  &__paragraph {}
+}
+
+.gatsby {
+  display: flex;
+  align-items: center;
+
+  padding: 3rem 14rem;
 
   &__illustration {
-    grid-area: illu;
+    flex-grow: 9;
 
-    & > img {
+    margin-right: 4rem;
+
+    &>img {
       width: 100%;
     }
   }
 
   &__text {
-    grid-area: text;
+    flex-grow: 11;
   }
 }
 
 .sass {
-  display: grid;
-  grid-template-columns: 14rem 1fr 4rem 1fr 14rem;
-  grid-template-areas: ". text . illu .";
+  display: flex;
   align-items: center;
 
-  padding-top: 6rem;
-  background-color: $blueGrey-9;
+  padding: 3rem 14rem;
 
   &__illustration {
-    grid-area: illu;
+    flex-grow: 11;
 
-    & > img {
+    margin-right: 4rem;
+
+    &>img {
       width: 100%;
     }
   }
 
   &__text {
-    grid-area: text;
+    flex-grow: 9;
   }
 }
