@@ -8,7 +8,7 @@
   row-gap: 3rem;
 
   padding-top: 3rem;
-  background: linear-gradient(to bottom, $blue-9, $blue-8);
+  background: linear-gradient(to bottom, $blue-3, $blue-2);
 
   &__text {
     grid-area: text;
@@ -24,6 +24,8 @@
 
   &__bottom {
     grid-area: bott;
+
+    display: grid;
 
     // transform: translateY(1rem);
   }
@@ -41,13 +43,18 @@
   padding: 3rem 28rem;
 
   &__profile {
-    border-radius: 50%;
-    margin-right: 1.6rem;
-    width: 9rem;
-    height: 9rem;
+    flex-basis: 12rem;
+    margin-right: 1.8rem;
+
+    display: flex;
+    align-items: center;
+
+    &>img {
+      border-radius: 50%;
+    }
   }
 
-  &__paragraph {}
+  &__text {}
 }
 
 .gatsby {

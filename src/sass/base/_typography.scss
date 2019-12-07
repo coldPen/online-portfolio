@@ -8,14 +8,14 @@
 .heading-primary {
   @include roboto-black;
   font-size: 4.8rem;
-  color: $blue-2;
+  color: $blue-9;
   line-height: 1.125;
 }
 
 .heading-secondary {
   @include nunito-regular;
   font-size: 3.2rem;
-  color: $blue-3;
+  color: $blue-8;
   // line-height: ?
 }
 

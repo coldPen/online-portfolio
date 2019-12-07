@@ -1,4 +1,5 @@
 /* Colors */
+
 // Primary colors
 $blue-0: hsl(205, 100%, 21%);
 $blue-1: hsl(205, 87%, 29%);
@@ -10,6 +11,18 @@ $blue-6: hsl(205, 74%, 65%);
 $blue-7: hsl(205, 84%, 74%);
 $blue-8: hsl(205, 97%, 85%);
 $blue-9: hsl(205, 79%, 92%);
+
+$yellow-0: hsl(15, 86%, 30%);
+$yellow-1:hsl(22, 82%, 39%);
+$yellow-2:hsl(29, 80%, 44%);
+$yellow-3:hsl(36, 77%, 49%);
+$yellow-4:hsl(42, 87%, 55%);
+$yellow-5:hsl(44, 92%, 63%);
+$yellow-6:hsl(48, 94%, 68%);
+$yellow-7:hsl(48, 95%, 76%);
+$yellow-8:hsl(48, 100%, 88%);
+$yellow-9:hsl(49, 100%, 96%);
+
 // Neutral colors
 $blueGrey-0: hsl(209, 61%, 16%);
 $blueGrey-1: hsl(211, 39%, 23%);
@@ -23,5 +36,7 @@ $blueGrey-8: hsl(212, 33%, 89%);
 $blueGrey-9: hsl(210, 36%, 96%);
 
 /* Fonts */
-$roboto: "Roboto", sans-serif;
-$nunito: "Nunito", sans-serif;
+$roboto: "Roboto",
+sans-serif;
+$nunito: "Nunito",
+sans-serif;
