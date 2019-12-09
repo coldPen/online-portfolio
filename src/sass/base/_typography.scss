@@ -25,3 +25,9 @@
   color: $blueGrey-2;
   // line-height: ?
 }
+
+.paragraph {
+  &:not(:last-child) {
+    margin-bottom: .6rem;
+  }
+}

@@ -5,7 +5,7 @@
     ".    text .    illu .   "
     "bott bott bott bott bott";
   align-items: center;
-  row-gap: 3rem;
+  row-gap: 4rem;
 
   padding-top: 3rem;
   background: linear-gradient(to bottom, $blue-3, $blue-2);
@@ -40,7 +40,7 @@
   display: flex;
   align-items: center;
 
-  padding: 3rem 28rem;
+  padding: 4rem 28rem;
 
   &__profile {
     flex-basis: 12rem;
@@ -58,13 +58,16 @@
 }
 
 .gatsby {
-  display: flex;
+  // display: flex;
+  display: grid;
+  grid-template-columns: 8fr 4rem 12fr;
   align-items: center;
 
-  padding: 3rem 14rem;
+  padding: 4rem 14rem;
 
   &__illustration {
-    flex-grow: 9;
+    // flex-grow: 9;
+    grid-column: 1 / 2;
 
     margin-right: 4rem;
 
@@ -74,27 +77,33 @@
   }
 
   &__text {
-    flex-grow: 11;
+    // flex-grow: 11;
+    grid-column: 3 / 4;
   }
 }
 
 .sass {
-  display: flex;
+  // display: flex;
+  display: grid;
+  grid-template-columns: 11fr 4rem 9fr;
   align-items: center;
 
   padding: 3rem 14rem;
 
-  &__illustration {
-    flex-grow: 11;
 
-    margin-right: 4rem;
+  &__text {
+    grid-column: 1 / 2;
+    // flex-grow: 11;
+    // margin-right: 4rem;
+  }
+
+  &__illustration {
+    grid-column: 3 / 4;
+    // flex-grow: 9;
+
 
     &>img {
       width: 100%;
     }
-  }
-
-  &__text {
-    flex-grow: 9;
   }
 }
