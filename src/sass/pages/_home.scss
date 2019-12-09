@@ -5,9 +5,9 @@
     ".    text .    illu .   "
     "bott bott bott bott bott";
   align-items: center;
-  row-gap: 4rem;
+  row-gap: 8rem;
 
-  padding-top: 3rem;
+  padding-top: 8rem;
   background: linear-gradient(to bottom, $blue-3, $blue-2);
 
   &__text {
@@ -26,21 +26,25 @@
     grid-area: bott;
 
     display: grid;
-
-    // transform: translateY(1rem);
   }
 }
 
 .presentation {
   background: $blueGrey-9;
-  // padding-top: 1rem;
+
+  // -1px pour compenser l'apparition du background de .hero sous certains screenwidths
+  margin-top: -0.1rem;
+  padding: calc(8rem + 0.1rem) 14rem 8rem;
+
+  display: grid;
+  row-gap: 8rem;
 }
 
 .intro {
   display: flex;
   align-items: center;
 
-  padding: 4rem 28rem;
+  padding: 0 14rem;
 
   &__profile {
     flex-basis: 12rem;
@@ -58,18 +62,12 @@
 }
 
 .gatsby {
-  // display: flex;
   display: grid;
   grid-template-columns: 8fr 4rem 12fr;
   align-items: center;
 
-  padding: 4rem 14rem;
-
   &__illustration {
-    // flex-grow: 9;
     grid-column: 1 / 2;
-
-    margin-right: 4rem;
 
     &>img {
       width: 100%;
@@ -77,33 +75,42 @@
   }
 
   &__text {
-    // flex-grow: 11;
     grid-column: 3 / 4;
   }
 }
 
-.sass {
-  // display: flex;
+.react {
   display: grid;
-  grid-template-columns: 11fr 4rem 9fr;
+  grid-template-columns: 12fr 4rem 8fr;
   align-items: center;
-
-  padding: 3rem 14rem;
-
 
   &__text {
     grid-column: 1 / 2;
-    // flex-grow: 11;
-    // margin-right: 4rem;
   }
 
   &__illustration {
     grid-column: 3 / 4;
-    // flex-grow: 9;
-
 
     &>img {
       width: 100%;
     }
+  }
+}
+
+.sass {
+  display: grid;
+  grid-template-columns: 8fr 4rem 12fr;
+  align-items: center;
+
+  &__illustration {
+    grid-column: 1 / 2;
+
+    &>img {
+      width: 100%;
+    }
+  }
+
+  &__text {
+    grid-column: 3 / 4;
   }
 }

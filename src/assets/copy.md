@@ -8,7 +8,7 @@ Passionné par le développement web, la richesse de ses outils et paradigmes, t
 
 
 
-Interfaces réactives
+### Interfaces réactives
 
 Je développe votre site avec Gatsby, un outil qui s'appuie sur le modèle JAMstack et est optimisé pour offrir le meilleur degré de réactivité à vos utilisateurs.
 
