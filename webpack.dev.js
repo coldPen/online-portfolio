@@ -20,6 +20,14 @@ module.exports = merge(common, {
           "postcss-loader", // CSS to Autoprefixed CSS
           "sass-loader" // SASS to CSS
         ]
+      },
+      {
+        test: /\.css$/,
+        use: [
+          "style-loader", // Inject styles into DOM
+          "css-loader", // Autoprefixed CSS to commonJS
+          "postcss-loader" // CSS to Autoprefixed CSS
+        ]
       }
     ]
   }

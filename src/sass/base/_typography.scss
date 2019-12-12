@@ -31,3 +31,16 @@
     margin-bottom: .6rem;
   }
 }
+
+.link,
+.link:link,
+.link:visited {
+  @include nunito-bold;
+  color: inherit;
+  text-decoration: none;
+  color: $blue-2;
+
+  &:hover {
+    color: $yellow-1;
+  }
+}

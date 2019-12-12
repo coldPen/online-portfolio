@@ -41,6 +41,14 @@ module.exports = merge(common, {
           "postcss-loader", // CSS to PostCSS
           "sass-loader" // SASS to CSS
         ]
+      },
+      {
+        test: /\.css$/,
+        use: [
+          MiniCssExtractPlugin.loader, // Extract CSS into files
+          "css-loader", // PostCSS to commonJS
+          "postcss-loader" // CSS to PostCSS
+        ]
       }
     ]
   }

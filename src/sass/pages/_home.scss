@@ -8,7 +8,7 @@
   row-gap: 8rem;
 
   padding-top: 8rem;
-  background: linear-gradient(to bottom, $blue-3, $blue-2);
+  background: linear-gradient(to bottom, $blue-4, $blue-3);
 
   &__text {
     grid-area: text;
@@ -17,7 +17,7 @@
   &__illustration {
     grid-area: illu;
 
-    &>img {
+    & > img {
       width: 100%;
     }
   }
@@ -44,7 +44,12 @@
   display: flex;
   align-items: center;
 
-  padding: 0 14rem;
+  padding: 3rem;
+  margin: -26rem 11rem 0;
+  height: min-content;
+
+  background-color: $white;
+  border-radius: 0.8rem;
 
   &__profile {
     flex-basis: 12rem;
@@ -53,12 +58,13 @@
     display: flex;
     align-items: center;
 
-    &>img {
+    & > img {
       border-radius: 50%;
     }
   }
 
-  &__text {}
+  &__text {
+  }
 }
 
 .gatsby {
@@ -69,7 +75,7 @@
   &__illustration {
     grid-column: 1 / 2;
 
-    &>img {
+    & > img {
       width: 100%;
     }
   }
@@ -91,7 +97,7 @@
   &__illustration {
     grid-column: 3 / 4;
 
-    &>img {
+    & > img {
       width: 100%;
     }
   }
@@ -105,7 +111,7 @@
   &__illustration {
     grid-column: 1 / 2;
 
-    &>img {
+    & > img {
       width: 100%;
     }
   }
