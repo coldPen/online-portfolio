@@ -1,70 +1,86 @@
+// Hero section
 .hero {
   display: grid;
-  grid-template-columns: 14rem 3fr 4rem 2fr 14rem;
+  grid-template-columns: 14rem 1fr 4rem 1fr 14rem;
   grid-template-areas:
     ".    text .    illu .   "
-    "bott bott bott bott bott";
+    "intr intr intr intr intr";
   align-items: center;
-  row-gap: 8rem;
+  row-gap: 12rem;
 
-  padding-top: 8rem;
+  padding: 12rem 0 0;
   background: linear-gradient(to bottom, $blue-4, $blue-3);
 
-  &__text {
+  &__headings {
     grid-area: text;
   }
 
   &__illustration {
     grid-area: illu;
 
-    & > img {
+    &>img {
       width: 100%;
     }
   }
 
-  &__bottom {
-    grid-area: bott;
+  &__intro {
+    grid-area: intr;
+
+    display: grid;
+    align-items: end;
+
+    position: relative;
+  }
+
+  &__waves {
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
 
     display: grid;
   }
-}
 
-.presentation {
-  background: $blueGrey-9;
+  &__card {
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
 
-  // -1px pour compenser l'apparition du background de .hero sous certains screenwidths
-  margin-top: -0.1rem;
-  padding: calc(8rem + 0.1rem) 14rem 8rem;
-
-  display: grid;
-  row-gap: 8rem;
-}
-
-.intro {
-  display: flex;
-  align-items: center;
-
-  padding: 3rem;
-  margin: -26rem 11rem 0;
-  height: min-content;
-
-  background-color: $white;
-  border-radius: 0.8rem;
-
-  &__profile {
-    flex-basis: 12rem;
-    margin-right: 1.8rem;
-
-    display: flex;
+    display: grid;
+    grid-template-columns: 12rem 1.8rem auto;
     align-items: center;
 
-    & > img {
+    padding: 3rem;
+    margin: 0 25rem;
+
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    background-color: $white;
+    border-radius: 0.8rem;
+    box-shadow: 0 1.5rem 3.5rem hsla(0, 0%, 0%, .2);
+  }
+
+  &__portrait {
+    grid-column: 1 / 2;
+
+    &>img {
       border-radius: 50%;
     }
   }
 
-  &__text {
+  &__presentation {
+    grid-column: 3 / 4;
   }
+}
+
+// Presentation | Skills section
+.presentation {
+  background: $blueGrey-9;
+  padding: 14rem 14rem 8rem;
+  margin: -0.1rem;
+
+  display: grid;
+  align-items: center;
+  row-gap: 8rem;
 }
 
 .gatsby {
@@ -75,7 +91,7 @@
   &__illustration {
     grid-column: 1 / 2;
 
-    & > img {
+    &>img {
       width: 100%;
     }
   }
@@ -97,7 +113,7 @@
   &__illustration {
     grid-column: 3 / 4;
 
-    & > img {
+    &>img {
       width: 100%;
     }
   }
@@ -111,12 +127,41 @@
   &__illustration {
     grid-column: 1 / 2;
 
-    & > img {
+    &>img {
       width: 100%;
     }
   }
 
   &__text {
     grid-column: 3 / 4;
+  }
+}
+
+// Portfolio section
+.portfolio {
+  background: $blueGrey-8;
+  padding: 8rem 14rem;
+
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 2.8rem;
+  }
+
+  &__card {
+    background: $white;
+    border-radius: 0.8rem;
+  }
+
+  &__heading {
+    padding: 2rem;
+  }
+
+  &__image {
+    width: 100%;
+  }
+
+  &__description {
+    padding: 1.8rem;
   }
 }

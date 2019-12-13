@@ -5,3 +5,15 @@
 .h-margin-bottom-big {
   margin-bottom: 2rem;
 }
+
+.h-color-dark {
+  color: $blueGrey-2;
+}
+
+.h-color-white {
+  color: $white;
+}
+
+.h-color-white-transparent {
+  color: rgba($white, 0.9);
+}
