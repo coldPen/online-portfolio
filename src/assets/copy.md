@@ -1,8 +1,27 @@
+<!--
+- lister les compétences
+- phaniebo.com
+-->
+
 # Développeur freelance Sass, JS, React & Gatsby
 
 ## Sites Web | Progressive Web Apps
 
+<!--
 Passionné par le développement web, la richesse de ses outils et paradigmes, tous mes travaux bénéficient d'une veille technique constante. Titulaire du Master Web éditorial et ayant trois ans d'expérience à la faveur de projets variés en entreprise et association, j'accorde un soin particulier à l'accessibilité, la réactivité et la maintenabilité de mes sites et applications.
+-->
+
+<!--
+Mots-clés :
+- robustesse
+- bon sens
+- efficacité
+- précision
+- optimisation
+-->
+
+Mon but : servir votre activité en lui associant une plateforme web fiable, optimisée pour vos besoins et aussi simple d'usage que possible.
+Passionné par le développement web, la richesse de ses outils et paradigmes, tous mes travaux bénéficient d'une veille technique constante. J'accorde un soin particulier à l'accessibilité, la réactivité et la maintenabilité de mes sites et applications.
 
 ### Sites ultra-réactifs
 
@@ -17,3 +36,40 @@ Je développe des applications web avec React et Redux, outils plébiscités qui
 ### Responsive design
 
 Vos designs sont intégrés avec Sass en suivant des méthodes d'organisation du code visant sa maintenabilité sur le long terme.
+
+<!--
+Contenus à mettre ailleurs si besoin :
+Titulaire du Master Web éditorial et ayant trois ans d'expérience à la faveur de projets variés en entreprise et association,
+ -->
+
+## Compétences
+
+### Langages
+
+- HTML
+- CSS
+- JavaScript
+
+### Librairies / Frameworks
+
+- Sass
+- React
+- Redux
+- GraphQL
+- Gatsby
+
+### Outils de compilation
+
+- Webpack
+- Create React App
+- Gatsby CLI
+
+### Services d'hébergement statique
+
+- Netlify
+- Contentful
+
+### Gestion de projet | Versionnage
+
+- NPM
+- Git | GitHub

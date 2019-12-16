@@ -9,6 +9,11 @@
   font-weight: 400;
 }
 
+@mixin nunito-semiBold {
+  font-family: $nunito;
+  font-weight: 600;
+}
+
 @mixin nunito-bold {
   font-family: $nunito;
   font-weight: 700;

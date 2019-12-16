@@ -27,13 +27,16 @@
   &:not(:last-child) {
     margin-bottom: .6rem;
   }
+
+  &--emphasized {
+    @include nunito-semiBold;
+  }
 }
 
 .link,
 .link:link,
 .link:visited {
   @include nunito-bold;
-  color: inherit;
   text-decoration: none;
   color: $blue-2;
 
