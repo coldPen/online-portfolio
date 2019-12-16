@@ -1,22 +1,25 @@
 // Hero section
 .hero {
   display: grid;
-  grid-template-columns: 14rem 1fr 4rem 1fr 14rem;
+  grid-template-columns: 14rem 11fr 4rem 9fr 14rem;
   grid-template-areas:
-    ".    text .    illu .   "
-    "intr intr intr intr intr";
+    ".     text  .     illustration .    "
+    "intro intro intro intro        intro";
   align-items: center;
   row-gap: 12rem;
 
   padding: 12rem 0 0;
-  background: linear-gradient(to bottom, $blue-4, $blue-3);
+  background:
+    linear-gradient(to bottom, rgba($blue-4, 0.97), rgba($blue-3, 0.97)),
+    $circuit-board;
+  background-attachment: local, fixed;
 
   &__headings {
     grid-area: text;
   }
 
   &__illustration {
-    grid-area: illu;
+    grid-area: illustration;
 
     &>img {
       width: 100%;
@@ -24,7 +27,7 @@
   }
 
   &__intro {
-    grid-area: intr;
+    grid-area: intro;
 
     display: grid;
     align-items: end;
@@ -56,7 +59,7 @@
 
     background-color: $white;
     border-radius: 0.8rem;
-    box-shadow: 0 1.5rem 3.5rem hsla(0, 0%, 0%, .2);
+    box-shadow: $box-shadow-4;
   }
 
   &__portrait {
@@ -74,9 +77,8 @@
 
 // Presentation | Skills section
 .presentation {
-  background: $blueGrey-9;
   padding: 14rem 14rem 8rem;
-  margin: -0.1rem;
+  margin: -0.1rem 0 0;
 
   display: grid;
   align-items: center;
@@ -139,22 +141,47 @@
 
 // Portfolio section
 .portfolio {
-  background: $blueGrey-8;
-  padding: 8rem 14rem;
+  background:
+    linear-gradient(to top, rgba($blue-4, 0.97), rgba($blue-3, 0.97)),
+    $signal;
+  background-attachment: local, fixed;
+
+  display: grid;
+  grid-template-columns: 14rem 1fr 14rem;
+  grid-template-areas:
+    "waves waves   waves"
+    ".     heading .    "
+    ".     cards   .    ";
+
+  padding-bottom: 12rem;
+
+  &__waves {
+    grid-area: waves;
+    margin: -.1rem 0 2.1rem;
+  }
+
+  &__heading {
+    grid-area: heading;
+  }
 
   &__cards {
+    grid-area: cards;
+
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    column-gap: 2.8rem;
+    column-gap: 4rem;
   }
 
   &__card {
     background: $white;
     border-radius: 0.8rem;
+    box-shadow: $box-shadow-3;
   }
 
   &__heading {
+    @include nunito-bold;
     padding: 2rem;
+    text-align: center;
   }
 
   &__image {
@@ -162,6 +189,13 @@
   }
 
   &__description {
-    padding: 1.8rem;
+    font-size: 1.6rem;
+    padding: 2rem;
   }
+}
+
+.contact {
+  &__text {}
+
+  &__cta {}
 }
