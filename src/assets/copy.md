@@ -55,14 +55,12 @@ Titulaire du Master Web éditorial et ayant trois ans d'expérience à la faveur
 - Sass
 - React
 - Redux
-- GraphQL
 - Gatsby
+- GraphQL
 
 ### Outils de compilation
 
 - Webpack
-- Create React App
-- Gatsby CLI
 
 ### Services d'hébergement statique
 

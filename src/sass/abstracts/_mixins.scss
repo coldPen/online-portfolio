@@ -1,4 +1,9 @@
 /* Fonts family + weight */
+@mixin roboto-medium {
+  font-family: $roboto;
+  font-weight: 500;
+}
+
 @mixin roboto-black {
   font-family: $roboto;
   font-weight: 900;

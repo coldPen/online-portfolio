@@ -1,3 +1,4 @@
+// Defaults typography styles
 .body {
   @include nunito-regular;
   font-size: 1.8rem;
@@ -5,6 +6,7 @@
   line-height: 1.6;
 }
 
+// Headings
 .heading-primary {
   @include roboto-black;
   font-size: 4.8rem;
@@ -14,15 +16,24 @@
 .heading-secondary {
   @include nunito-regular;
   font-size: 3.2rem;
-  // line-height: ?
+  // line-height: 1.25;
+
+  &--bold {
+    @include nunito-bold;
+  }
 }
 
 .heading-tertiary {
-  @include nunito-bold;
   font-size: 2.4rem;
-  // line-height: ?
+  line-height: 1.2;
+  @include nunito-regular;
+
+  &--bold {
+    @include nunito-bold;
+  }
 }
 
+// Paragraphs
 .paragraph {
   &:not(:last-child) {
     margin-bottom: .6rem;

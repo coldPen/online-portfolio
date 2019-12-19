@@ -1,0 +1,28 @@
+<svg width="0" height="0" class="hidden">
+  <symbol xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" viewBox="0 0 1920 167" id="end">
+    <path d="M1920 1v69.5c-362.63 60.035-692.8 55.535-990.5-13.501C565.833-27.335 256 9.093 0 166.28L1 .999h1919z" fill="url(#paint0_linear)"></path>
+    <path d="M1920 1v71c-269.03 70.44-603.53 66.44-1003.5-12C427-36 0 166.281 0 166.281L1 1h1919z" fill="#F0F4F8" fill-opacity=".3"></path>
+    <path d="M1920 .25V72c-372.11 94.784-704.28 103.951-996.5 27.5C557.833 3.833 250 26.094 0 166.281L1 .25h1919z" fill="#F0F4F8" fill-opacity=".3"></path>
+    <path d="M1920 1v67c-399.33 104.333-743.17 122-1031.5 53C456 17.5 134.5 101.781 0 166.281L1 .25 1920 1z" fill="#F0F4F8" fill-opacity=".35"></path>
+    <defs>
+      <linearGradient id="paint0_linear" x1="945.658" y1="142.817" x2="945.658" y2="72.192" gradientUnits="userSpaceOnUse">
+        <stop stop-color="#F0F4F8"></stop>
+        <stop offset="1" stop-color="#F0F4F8"></stop>
+      </linearGradient>
+    </defs>
+  </symbol>
+  <symbol xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" viewBox="0 0 1920 170" id="start">
+    <defs>
+      <linearGradient x1="49.253%" y1="85.804%" x2="49.253%" y2="43.074%" id="a">
+        <stop stop-color="#f0f4f8" offset="0%"></stop>
+        <stop stop-color="#f0f4f8" offset="100%"></stop>
+      </linearGradient>
+    </defs>
+    <g fill="none">
+      <path d="M1920 4.719v69.5c-362.63 60.036-692.797 55.536-990.5-13.5C565.833-23.615 256 12.813 0 170L1 4.719h1919z" fill="url(#a)" transform="rotate(180 960.5 87.36)"></path>
+      <path d="M1 170V99c269.033-70.44 603.533-66.44 1003.5 12C1494 207 1921 4.719 1921 4.719L1920 170H1z" fill-opacity=".3" fill="#f0f4f8"></path>
+      <path d="M1 170.75V99C373.115 4.216 705.281-4.951 997.5 71.5c365.667 95.667 673.5 73.406 923.5-66.781l-1 166.031H1z" fill-opacity=".3" fill="#f0f4f8"></path>
+      <path d="M1 170v-67C400.333-1.333 744.167-19 1032.5 50c432.5 103.5 754 19.219 888.5-45.281l-1 166.031L1 170z" fill-opacity=".35" fill="#f0f4f8"></path>
+    </g>
+  </symbol>
+</svg>

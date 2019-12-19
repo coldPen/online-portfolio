@@ -1,3 +1,4 @@
+// Bottom margin helpers
 .h-margin-bottom-small {
   margin-bottom: 1rem;
 }
@@ -6,14 +7,15 @@
   margin-bottom: 2rem;
 }
 
+// Text color helpers
 .h-color-dark {
   color: $blueGrey-2;
 }
 
-.h-color-white {
-  color: $white;
+.h-color-lightest-bluegrey {
+  color: $blueGrey-9;
 }
 
-.h-color-white-transparent {
-  color: rgba($white, 0.9);
+.h-color-lightest-blue {
+  color: $blue-9;
 }

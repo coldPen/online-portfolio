@@ -59,7 +59,7 @@
     top: 50%;
     transform: translateY(-50%);
 
-    background-color: $white;
+    background-color: $blueGrey-9;
     border-radius: 0.8rem;
     box-shadow: $box-shadow-4;
   }
@@ -142,8 +142,8 @@
   }
 }
 
-// Portfolio section
-.portfolio {
+// Skills section
+.skills {
   background:
     linear-gradient(to top, rgba($blue-4, 0.97), rgba($blue-3, 0.97)),
     $signal;
@@ -154,57 +154,119 @@
   display: grid;
   grid-template-columns: 14rem 1fr 14rem;
   grid-template-areas:
-    "waves waves   waves"
-    ".     heading .    "
-    ".     cards   .    ";
+    "waves waves      waves"
+    ".     heading    .    "
+    ".     categories .    ";
   row-gap: 2rem;
 
-  padding-bottom: 12rem;
-
   &__waves {
-    margin: -.1rem 0 .1rem;
     grid-area: waves;
-    font-size: 0;
-
-    &>svg {}
+    margin: -.1rem 0 .1rem;
   }
 
   &__heading {
     grid-area: heading;
+    text-align: center;
+    @include nunito-bold;
   }
 
-  &__cards {
-    grid-area: cards;
+  &__categories {
+    grid-area: categories;
 
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    column-gap: 4rem;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 2.6rem;
   }
 
-  &__card {
+  &__category {
     background: $white;
     border-radius: 0.8rem;
-    box-shadow: $box-shadow-3;
+    box-shadow: $box-shadow-1;
   }
 
-  &__heading {
-    @include nunito-bold;
-    padding: 2rem;
-    text-align: center;
+  &__subheading {
+    padding: 1.4rem;
+    line-height: 1.1;
+    margin-bottom: 1.4rem;
+    border-radius: 0.8rem 0.8rem 0 0;
+    box-shadow: $box-shadow-0;
   }
 
-  &__image {
-    width: 100%;
+  &__list {
+    padding: 0 1.4rem 1.4rem;
+    list-style-type: none;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    margin-bottom: -1rem;
   }
 
-  &__description {
+  &__item {
+    display: flex;
+    align-items: center;
+
+    line-height: 1;
+    background: $blue-0;
+    color: $white;
+    padding: .6rem 1.2rem;
     font-size: 1.6rem;
-    padding: 2rem;
+    width: max-content;
+    border-radius: 10rem;
+    margin-bottom: 1rem;
+    box-shadow: $box-shadow-0;
+
+    &:not(:last-child) {
+      margin-right: 1rem;
+    }
+  }
+
+  &__icon {
+    height: 2rem;
+    width: 2rem;
+    fill: $blueGrey-9;
+    margin-right: .6rem;
   }
 }
 
-.contact {
-  &__text {}
+// Portfolio section
+// .portfolio {
+//   &__heading {
+//     grid-area: heading;
+//   }
 
-  &__cta {}
-}
+//   &__cards {
+//     grid-area: cards;
+
+//     display: grid;
+//     grid-template-columns: repeat(3, 1fr);
+//     column-gap: 4rem;
+//   }
+
+//   &__card {
+//     background: $white;
+//     border-radius: 0.8rem;
+//     box-shadow: $box-shadow-3;
+//   }
+
+//   &__heading {
+//     @include nunito-bold;
+//     padding: 2rem;
+//     text-align: center;
+//   }
+
+//   &__image {
+//     width: 100%;
+//   }
+
+//   &__description {
+//     font-size: 1.6rem;
+//     padding: 2rem;
+//   }
+// }
+
+// .contact {
+//   &__text {}
+
+//   &__cta {}
+// }
