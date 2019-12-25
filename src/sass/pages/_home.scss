@@ -20,6 +20,15 @@
     grid-area: text;
   }
 
+  &__heading {
+    color: $blueGrey-9;
+    margin-bottom: $heading-margin-bottom-1;
+  }
+
+  &__subheading {
+    color: $blue-9;
+  }
+
   &__illustration {
     grid-area: illustration;
 
@@ -88,17 +97,28 @@
   row-gap: 8rem;
 }
 
-.gatsby {
+.gatsby,
+.react,
+.sass {
   display: grid;
-  grid-template-columns: 8fr 4rem 12fr;
   align-items: center;
+
+  &__illustration>img {
+    width: 100%;
+  }
+
+  &__heading {
+    color: $blueGrey-2;
+    margin-bottom: $heading-margin-bottom-0;
+  }
+}
+
+.gatsby,
+.sass {
+  grid-template-columns: 8fr 4rem 12fr;
 
   &__illustration {
     grid-column: 1 / 2;
-
-    &>img {
-      width: 100%;
-    }
   }
 
   &__text {
@@ -107,37 +127,13 @@
 }
 
 .react {
-  display: grid;
   grid-template-columns: 12fr 4rem 8fr;
-  align-items: center;
 
   &__text {
     grid-column: 1 / 2;
   }
 
   &__illustration {
-    grid-column: 3 / 4;
-
-    &>img {
-      width: 100%;
-    }
-  }
-}
-
-.sass {
-  display: grid;
-  grid-template-columns: 8fr 4rem 12fr;
-  align-items: center;
-
-  &__illustration {
-    grid-column: 1 / 2;
-
-    &>img {
-      width: 100%;
-    }
-  }
-
-  &__text {
     grid-column: 3 / 4;
   }
 }
@@ -145,7 +141,7 @@
 // Skills section
 .skills {
   background:
-    linear-gradient(to top, rgba($blue-4, 0.97), rgba($blue-3, 0.97)),
+    linear-gradient(to bottom, rgba($blue-4, 0.97), rgba($blue-3, 0.97)),
     $signal;
   background-attachment:
     local,
@@ -168,6 +164,7 @@
     grid-area: heading;
     text-align: center;
     @include nunito-bold;
+    color: $blueGrey-9;
   }
 
   &__categories {
@@ -186,6 +183,7 @@
 
   &__subheading {
     padding: 1.4rem;
+    color: $blueGrey-2;
     line-height: 1.1;
     margin-bottom: 1.4rem;
     border-radius: 0.8rem 0.8rem 0 0;
@@ -207,9 +205,9 @@
     align-items: center;
 
     line-height: 1;
-    background: $blue-0;
+    background: $blue-2;
     color: $white;
-    padding: .6rem 1.2rem;
+    padding: .8rem 1rem .8rem .8rem;
     font-size: 1.6rem;
     width: max-content;
     border-radius: 10rem;
@@ -226,6 +224,12 @@
     width: 2rem;
     fill: $blueGrey-9;
     margin-right: .6rem;
+
+    &--smaller {
+      height: 1.8rem;
+      width: 1.8rem;
+      margin: .2rem .6rem .2rem .2rem;
+    }
   }
 }
 

@@ -15,13 +15,11 @@
     <main>
       <section class="hero">
         <div class="hero__headings">
-          <h1
-            class="heading-primary h-margin-bottom-big h-color-lightest-bluegrey"
-          >
+          <h1 class="hero__heading heading-primary">
             Développeur freelance<br />
             Sass, JS, React & Gatsby
           </h1>
-          <h2 class="heading-secondary h-color-lightest-blue">
+          <h2 class="hero__subheading heading-secondary">
             Sites & Applications Web
           </h2>
         </div>
@@ -30,7 +28,7 @@
         </div>
         <div class="hero__intro">
           <div class="hero__waves">
-            <svg
+            <!-- <svg
               xmlns="http://www.w3.org/2000/svg"
               preserveAspectRatio="none"
               viewBox="0 0 1920 170"
@@ -69,6 +67,9 @@
                   fill="#f0f4f8"
                 ></path>
               </g>
+            </svg> -->
+            <svg preserveAspectRatio="none" viewBox="0 0 1920 167">
+              <use xlink:href="./assets/waves.svg#start" />
             </svg>
           </div>
           <div class="hero__card">
@@ -97,9 +98,7 @@
             <img src="./assets/gatsby.svg" alt="Gatsby" />
           </div>
           <div class="gatsby__text">
-            <h3
-              class="heading-tertiary heading-tertiary--bold h-color-dark h-margin-bottom-small"
-            >
+            <h3 class="gatsby__heading heading-tertiary heading-tertiary--bold">
               Sites ultra-réactifs
             </h3>
             <p class="paragraph">
@@ -119,9 +118,7 @@
         </div>
         <div class="react" data-aos="fade-up">
           <div class="react__text">
-            <h3
-              class="heading-tertiary heading-tertiary--bold h-color-dark h-margin-bottom-small"
-            >
+            <h3 class="react__heading heading-tertiary heading-tertiary--bold">
               Applications React
             </h3>
             <p class="paragraph">
@@ -142,9 +139,7 @@
             <img src="./assets/responsive.svg" alt="Responsive" />
           </div>
           <div class="sass__text">
-            <h3
-              class="heading-tertiary heading-tertiary--bold h-color-dark h-margin-bottom-small"
-            >
+            <h3 class="sass__heading heading-tertiary heading-tertiary--bold">
               Responsive design
             </h3>
             <p class="paragraph">
@@ -198,119 +193,117 @@
             </defs>
           </svg>
         </div>
-        <h2
-          class="skills__heading heading-secondary heading-secondary--bold h-color-lightest-bluegrey"
-        >
+        <h2 class="skills__heading heading-secondary heading-secondary--bold">
           Mes compétences
         </h2>
         <div class="skills__categories">
           <section class="skills__category">
-            <h3 class="skills__subheading h-color-dark">
+            <h3 class="skills__subheading">
               Langages
             </h3>
             <ul class="skills__list">
               <li class="skills__item">
-                <svg class="skills__icon">
-                  <use xlink:href="./assets/icons.svg#html5"></use>
+                <svg class="skills__icon skills__icon--smaller">
+                  <use xlink:href="./assets/icons.svg#html5" />
                 </svg>
                 HTML
               </li>
               <li class="skills__item">
-                <svg class="skills__icon">
-                  <use xlink:href="./assets/icons.svg#css3"></use>
+                <svg class="skills__icon skills__icon--smaller">
+                  <use xlink:href="./assets/icons.svg#css3" />
                 </svg>
                 CSS
               </li>
               <li class="skills__item">
-                <svg class="skills__icon">
-                  <use xlink:href="./assets/icons.svg#javascript"></use>
+                <svg class="skills__icon skills__icon--smaller">
+                  <use xlink:href="./assets/icons.svg#javascript" />
                 </svg>
                 JavaScript
               </li>
             </ul>
           </section>
           <section class="skills__category">
-            <h3 class="skills__subheading h-color-dark">
+            <h3 class="skills__subheading">
               Librairies
             </h3>
             <ul class="skills__list">
               <li class="skills__item">
                 <svg class="skills__icon">
-                  <use xlink:href="./assets/icons.svg#sass"></use>
+                  <use xlink:href="./assets/icons.svg#sass" />
                 </svg>
                 Sass
               </li>
               <li class="skills__item">
                 <svg class="skills__icon">
-                  <use xlink:href="./assets/icons.svg#react"></use>
+                  <use xlink:href="./assets/icons.svg#react" />
                 </svg>
                 React
               </li>
               <li class="skills__item">
                 <svg class="skills__icon">
-                  <use xlink:href="./assets/icons.svg#redux"></use>
+                  <use xlink:href="./assets/icons.svg#redux" />
                 </svg>
                 Redux
               </li>
               <li class="skills__item">
                 <svg class="skills__icon">
-                  <use xlink:href="./assets/icons.svg#gatsby"></use>
+                  <use xlink:href="./assets/icons.svg#gatsby" />
                 </svg>
                 Gatsby
               </li>
               <li class="skills__item">
                 <svg class="skills__icon">
-                  <use xlink:href="./assets/icons.svg#graphql"></use>
+                  <use xlink:href="./assets/icons.svg#graphql" />
                 </svg>
                 GraphQL
               </li>
             </ul>
           </section>
           <section class="skills__category">
-            <h3 class="skills__subheading h-color-dark">
+            <h3 class="skills__subheading">
               Services d'hébergement
             </h3>
             <ul class="skills__list">
               <li class="skills__item">
                 <svg class="skills__icon">
-                  <use xlink:href="./assets/icons.svg#github"></use>
+                  <use xlink:href="./assets/icons.svg#github" />
                 </svg>
                 GitHub Pages
               </li>
               <li class="skills__item">
                 <svg class="skills__icon">
-                  <use xlink:href="./assets/icons.svg#netlify"></use>
+                  <use xlink:href="./assets/icons.svg#netlify" />
                 </svg>
                 Netlify
               </li>
               <li class="skills__item">
                 <svg class="skills__icon">
-                  <use xlink:href="./assets/icons.svg#contentful"></use>
+                  <use xlink:href="./assets/icons.svg#contentful" />
                 </svg>
                 Contentful
               </li>
             </ul>
           </section>
           <section class="skills__category">
-            <h3 class="skills__subheading h-color-dark">
+            <h3 class="skills__subheading">
               Gestion de paquets et versionnage
             </h3>
             <ul class="skills__list">
               <li class="skills__item">
                 <svg class="skills__icon">
-                  <use xlink:href="./assets/icons.svg#npm"></use>
+                  <use xlink:href="./assets/icons.svg#npm" />
                 </svg>
                 NPM
               </li>
               <li class="skills__item">
                 <svg class="skills__icon">
-                  <use xlink:href="./assets/icons.svg#webpack"></use>
+                  <use xlink:href="./assets/icons.svg#webpack" />
                 </svg>
                 WebPack
               </li>
               <li class="skills__item">
                 <svg class="skills__icon">
-                  <use xlink:href="./assets/icons.svg#git"></use>
+                  <use xlink:href="./assets/icons.svg#git" />
                 </svg>
                 Git
               </li>
@@ -319,7 +312,7 @@
         </div>
       </section>
       <!-- <section class="portfolio">
-        <h2 class="portfolio__heading heading-secondary h-color-lightest-bluegrey">
+        <h2 class="portfolio__heading heading-secondary">
           Mes derniers projets
         </h2>
         <div class="portfolio__cards">
