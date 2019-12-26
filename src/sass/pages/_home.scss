@@ -10,7 +10,7 @@
 
   padding: 12rem 0 0;
   background:
-    linear-gradient(to bottom, rgba($blue-4, 0.97), rgba($blue-3, 0.97)),
+    linear-gradient(to bottom, rgba($blue-4, 0.98), rgba($blue-3, 0.98)),
     $circuit-board;
   background-attachment:
     local,
@@ -51,6 +51,12 @@
     grid-column: 1 / 2;
 
     font-size: 0;
+
+    overflow: hidden;
+
+    &>svg {
+      transform: scale(1.01);
+    }
   }
 
   &__card {
@@ -141,7 +147,7 @@
 // Skills section
 .skills {
   background:
-    linear-gradient(to bottom, rgba($blue-4, 0.97), rgba($blue-3, 0.97)),
+    linear-gradient(to bottom, rgba($blue-4, 0.98), rgba($blue-3, 0.98)),
     $signal;
   background-attachment:
     local,
@@ -150,14 +156,31 @@
   display: grid;
   grid-template-columns: 14rem 1fr 14rem;
   grid-template-areas:
-    "waves waves      waves"
-    ".     heading    .    "
-    ".     categories .    ";
+    "top-waves    top-waves    top-waves   "
+    ".            heading      .           "
+    ".            categories   .           "
+    "bottom-waves bottom-waves bottom-waves";
   row-gap: 2rem;
 
-  &__waves {
-    grid-area: waves;
-    margin: -.1rem 0 .1rem;
+  &__top-waves {
+    grid-area: top-waves;
+
+    overflow: hidden;
+
+    &>svg {
+      transform: rotate(180deg) scale(1.01);
+    }
+  }
+
+  &__bottom-waves {
+    grid-area: bottom-waves;
+    font-size: 0;
+
+    overflow: hidden;
+
+    &>svg {
+      transform: scale(1.01);
+    }
   }
 
   &__heading {
@@ -173,6 +196,8 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     column-gap: 2.6rem;
+
+    margin-bottom: 4rem;
   }
 
   &__category {
@@ -228,49 +253,10 @@
     &--smaller {
       height: 1.8rem;
       width: 1.8rem;
-      margin: .2rem .6rem .2rem .2rem;
+      margin: .2rem .6rem .2rem .4rem;
     }
   }
 }
 
-// Portfolio section
-// .portfolio {
-//   &__heading {
-//     grid-area: heading;
-//   }
-
-//   &__cards {
-//     grid-area: cards;
-
-//     display: grid;
-//     grid-template-columns: repeat(3, 1fr);
-//     column-gap: 4rem;
-//   }
-
-//   &__card {
-//     background: $white;
-//     border-radius: 0.8rem;
-//     box-shadow: $box-shadow-3;
-//   }
-
-//   &__heading {
-//     @include nunito-bold;
-//     padding: 2rem;
-//     text-align: center;
-//   }
-
-//   &__image {
-//     width: 100%;
-//   }
-
-//   &__description {
-//     font-size: 1.6rem;
-//     padding: 2rem;
-//   }
-// }
-
-// .contact {
-//   &__text {}
-
-//   &__cta {}
-// }
+// Projects section
+.projects {}
