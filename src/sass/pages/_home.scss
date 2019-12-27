@@ -10,10 +10,10 @@
 
   padding: 12rem 0 0;
   background:
-    linear-gradient(to bottom, rgba($blue-4, 0.98), rgba($blue-3, 0.98)),
+    linear-gradient(to right, rgba($blue-0, 0.975), rgba($blue-4, 0.975)),
     $circuit-board;
   background-attachment:
-    local,
+    fixed,
     fixed;
 
   &__headings {
@@ -31,6 +31,8 @@
 
   &__illustration {
     grid-area: illustration;
+
+    font-size: 0;
 
     &>img {
       width: 100%;
@@ -86,6 +88,8 @@
 
     &>img {
       border-radius: 50%;
+      width: 12rem;
+      height: 12rem;
     }
   }
 
@@ -94,12 +98,11 @@
   }
 }
 
-// Presentation | Skills section
+// Presentation section
 .presentation {
   padding: 14rem 14rem 8rem;
 
   display: grid;
-  align-items: center;
   row-gap: 8rem;
 }
 
@@ -109,8 +112,12 @@
   display: grid;
   align-items: center;
 
-  &__illustration>img {
-    width: 100%;
+  &__illustration {
+    font-size: 0;
+
+    &>img {
+      width: 100%;
+    }
   }
 
   &__heading {
@@ -147,10 +154,10 @@
 // Skills section
 .skills {
   background:
-    linear-gradient(to bottom, rgba($blue-4, 0.98), rgba($blue-3, 0.98)),
+    linear-gradient(to right, rgba($blue-0, 0.975), rgba($blue-4, 0.975)),
     $signal;
   background-attachment:
-    local,
+    fixed,
     fixed;
 
   display: grid;
@@ -165,16 +172,21 @@
   &__top-waves {
     grid-area: top-waves;
 
+    font-size: 0;
+    margin-bottom: 4rem;
+
     overflow: hidden;
 
     &>svg {
-      transform: rotate(180deg) scale(1.01);
+      transform: scale(1.01) rotate(180deg);
     }
   }
 
   &__bottom-waves {
     grid-area: bottom-waves;
+
     font-size: 0;
+    margin-top: 4rem;
 
     overflow: hidden;
 
@@ -188,6 +200,7 @@
     text-align: center;
     @include nunito-bold;
     color: $blueGrey-9;
+    line-height: 1;
   }
 
   &__categories {
@@ -196,8 +209,6 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     column-gap: 2.6rem;
-
-    margin-bottom: 4rem;
   }
 
   &__category {
@@ -251,6 +262,7 @@
     margin-right: .6rem;
 
     &--smaller {
+      @extend .skills__icon;
       height: 1.8rem;
       width: 1.8rem;
       margin: .2rem .6rem .2rem .4rem;
@@ -259,4 +271,34 @@
 }
 
 // Projects section
-.projects {}
+.projects {
+  padding: 8rem 14rem;
+
+  display: grid;
+  row-gap: 8rem;
+
+  &__heading {
+    text-align: center;
+    line-height: 1;
+  }
+}
+
+.ateliers,
+.aouf,
+.wecashup {
+  display: grid;
+  align-items: center;
+
+  &__illustration {
+    font-size: 0;
+
+    &>img {
+      width: 100%;
+    }
+  }
+
+  &__heading {
+    color: $blueGrey-2;
+    margin-bottom: $heading-margin-bottom-0;
+  }
+}

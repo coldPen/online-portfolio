@@ -19,6 +19,7 @@
   // line-height: 1.25;
 
   &--bold {
+    @extend .heading-secondary;
     @include nunito-bold;
   }
 }
@@ -29,6 +30,7 @@
   @include nunito-regular;
 
   &--bold {
+    @extend .heading-tertiary;
     @include nunito-bold;
   }
 }
@@ -40,6 +42,7 @@
   }
 
   &--emphasized {
+    @extend .paragraph;
     @include nunito-semiBold;
   }
 }
