@@ -23,3 +23,16 @@
   font-family: $nunito;
   font-weight: 700;
 }
+
+// Moving background on projects hover
+@mixin projects-moving-background($color, $hover-color) {
+  background-image: linear-gradient(120deg,
+      $color 0,
+      $color 50%,
+      $hover-color 50%);
+  background-size: 250%;
+
+  &:hover {
+    background-position: 100%;
+  }
+}

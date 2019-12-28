@@ -9,12 +9,13 @@
   row-gap: 12rem;
 
   padding: 12rem 0 0;
-  background:
-    linear-gradient(to right, rgba($blue-0, 0.975), rgba($blue-4, 0.975)),
+  background: linear-gradient(
+      to right,
+      rgba($blue-0, 0.975),
+      rgba($blue-4, 0.975)
+    ),
     $circuit-board;
-  background-attachment:
-    fixed,
-    fixed;
+  background-attachment: fixed, fixed;
 
   &__headings {
     grid-area: text;
@@ -34,7 +35,7 @@
 
     font-size: 0;
 
-    &>img {
+    & > img {
       width: 100%;
     }
   }
@@ -56,7 +57,7 @@
 
     overflow: hidden;
 
-    &>svg {
+    & > svg {
       transform: scale(1.01);
     }
   }
@@ -86,7 +87,7 @@
 
     font-size: 0;
 
-    &>img {
+    & > img {
       border-radius: 50%;
       width: 12rem;
       height: 12rem;
@@ -115,7 +116,7 @@
   &__illustration {
     font-size: 0;
 
-    &>img {
+    & > img {
       width: 100%;
     }
   }
@@ -153,12 +154,13 @@
 
 // Skills section
 .skills {
-  background:
-    linear-gradient(to right, rgba($blue-0, 0.975), rgba($blue-4, 0.975)),
+  background: linear-gradient(
+      to right,
+      rgba($blue-0, 0.975),
+      rgba($blue-4, 0.975)
+    ),
     $signal;
-  background-attachment:
-    fixed,
-    fixed;
+  background-attachment: fixed, fixed;
 
   display: grid;
   grid-template-columns: 14rem 1fr 14rem;
@@ -177,7 +179,7 @@
 
     overflow: hidden;
 
-    &>svg {
+    & > svg {
       transform: scale(1.01) rotate(180deg);
     }
   }
@@ -190,7 +192,7 @@
 
     overflow: hidden;
 
-    &>svg {
+    & > svg {
       transform: scale(1.01);
     }
   }
@@ -242,8 +244,8 @@
 
     line-height: 1;
     background: $blue-2;
-    color: $white;
-    padding: .8rem 1rem .8rem .8rem;
+    color: $blueGrey-9;
+    padding: 0.8rem 1rem 0.8rem 0.8rem;
     font-size: 1.6rem;
     width: max-content;
     border-radius: 10rem;
@@ -259,46 +261,68 @@
     height: 2rem;
     width: 2rem;
     fill: $blueGrey-9;
-    margin-right: .6rem;
+    margin-right: 0.6rem;
 
     &--smaller {
       @extend .skills__icon;
       height: 1.8rem;
       width: 1.8rem;
-      margin: .2rem .6rem .2rem .4rem;
+      margin: 0.2rem 0.6rem 0.2rem 0.4rem;
     }
   }
 }
 
 // Projects section
 .projects {
-  padding: 8rem 14rem;
+  padding: 8rem calc(14rem + 8rem);
 
   display: grid;
-  row-gap: 8rem;
+  grid-template-columns: 7fr 5fr;
+  grid-template-rows: min-content 20rem 16rem;
+  grid-template-areas:
+    "heading  heading "
+    "ateliers aouf    "
+    "wecashup wecashup";
+  gap: 2.8rem;
 
   &__heading {
+    grid-area: heading;
+
     text-align: center;
     line-height: 1;
   }
-}
 
-.ateliers,
-.aouf,
-.wecashup {
-  display: grid;
-  align-items: center;
+  &__ateliers,
+  &__aouf,
+  &__wecashup {
+    color: $white;
+    padding: 2.8rem 3.4rem;
+    line-height: 1;
+    border-radius: $border-radius-0;
+    box-shadow: $box-shadow-1;
+    transition: all 0.2s ease-out;
 
-  &__illustration {
-    font-size: 0;
-
-    &>img {
-      width: 100%;
+    &:hover {
+      transform: translateY(-0.2rem) scale(1.005);
+      box-shadow: $box-shadow-2;
     }
   }
 
-  &__heading {
-    color: $blueGrey-2;
-    margin-bottom: $heading-margin-bottom-0;
+  &__ateliers {
+    grid-area: ateliers;
+
+    @include projects-moving-background($ateliers-1, $ateliers-0);
+  }
+
+  &__aouf {
+    grid-area: aouf;
+
+    @include projects-moving-background($aouf-1, $aouf-0);
+  }
+
+  &__wecashup {
+    grid-area: wecashup;
+
+    @include projects-moving-background($wecashup-1, $wecashup-0);
   }
 }
