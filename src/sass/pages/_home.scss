@@ -9,11 +9,9 @@
   row-gap: 12rem;
 
   padding: 12rem 0 0;
-  background: linear-gradient(
-      to right,
+  background: linear-gradient(to right,
       rgba($blue-0, 0.975),
-      rgba($blue-4, 0.975)
-    ),
+      rgba($blue-4, 0.975)),
     $circuit-board;
   background-attachment: fixed, fixed;
 
@@ -35,7 +33,7 @@
 
     font-size: 0;
 
-    & > img {
+    &>img {
       width: 100%;
     }
   }
@@ -57,7 +55,7 @@
 
     overflow: hidden;
 
-    & > svg {
+    &>svg {
       transform: scale(1.01);
     }
   }
@@ -87,7 +85,7 @@
 
     font-size: 0;
 
-    & > img {
+    &>img {
       border-radius: 50%;
       width: 12rem;
       height: 12rem;
@@ -116,7 +114,7 @@
   &__illustration {
     font-size: 0;
 
-    & > img {
+    &>img {
       width: 100%;
     }
   }
@@ -154,11 +152,9 @@
 
 // Skills section
 .skills {
-  background: linear-gradient(
-      to right,
+  background: linear-gradient(to right,
       rgba($blue-0, 0.975),
-      rgba($blue-4, 0.975)
-    ),
+      rgba($blue-4, 0.975)),
     $signal;
   background-attachment: fixed, fixed;
 
@@ -179,7 +175,7 @@
 
     overflow: hidden;
 
-    & > svg {
+    &>svg {
       transform: scale(1.01) rotate(180deg);
     }
   }
@@ -192,7 +188,7 @@
 
     overflow: hidden;
 
-    & > svg {
+    &>svg {
       transform: scale(1.01);
     }
   }
@@ -300,6 +296,7 @@
     line-height: 1;
     border-radius: $border-radius-0;
     box-shadow: $box-shadow-1;
+    cursor: pointer;
     transition: all 0.2s ease-out;
 
     &:hover {
