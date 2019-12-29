@@ -270,15 +270,15 @@
 
 // Projects section
 .projects {
-  padding: 8rem calc(14rem + 8rem);
+  padding: 8rem calc(14rem + 10rem);
 
   display: grid;
-  grid-template-columns: 7fr 5fr;
-  grid-template-rows: min-content 20rem 16rem;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: min-content 20rem 20rem;
   grid-template-areas:
     "heading  heading "
-    "ateliers aouf    "
-    "wecashup wecashup";
+    "ateliers wecashup"
+    "aouf     wecashup";
   gap: 2.8rem;
 
   &__heading {
@@ -291,11 +291,14 @@
   &__ateliers,
   &__aouf,
   &__wecashup {
+    display: flex;
+
     color: $white;
     padding: 2.8rem 3.4rem;
     line-height: 1;
     border-radius: $border-radius-0;
     box-shadow: $box-shadow-1;
+    overflow: hidden;
     cursor: pointer;
     transition: all 0.2s ease-out;
 
@@ -311,10 +314,24 @@
     @include projects-moving-background($ateliers-1, $ateliers-0);
   }
 
+  &__ateliers-logo,
+  &__aouf-logo,
+  &__wecashup-logo {
+    width: 16rem;
+
+    &>img {
+      width: 100%;
+    }
+  }
+
   &__aouf {
     grid-area: aouf;
 
     @include projects-moving-background($aouf-1, $aouf-0);
+  }
+
+  &__aouf-logo {
+    justify-self: flex-end;
   }
 
   &__wecashup {

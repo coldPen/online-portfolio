@@ -25,12 +25,13 @@
 }
 
 // Moving background on projects hover
-@mixin projects-moving-background($color, $hover-color) {
+@mixin projects-moving-background($color-1, $color-0) {
   background-image: linear-gradient(120deg,
-      $color 0,
-      $color 50%,
-      $hover-color 50%);
-  background-size: 250%;
+      $blue-5 0,
+      $blue-7 50%,
+      $color-1 50%,
+      $color-0 100%);
+  background-size: 260%;
 
   &:hover {
     background-position: 100%;
