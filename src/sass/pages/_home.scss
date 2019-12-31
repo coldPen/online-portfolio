@@ -294,7 +294,7 @@
     display: flex;
 
     color: $white;
-    padding: 2.8rem 3.4rem;
+    // padding: 2.8rem 3.4rem;
     line-height: 1;
     border-radius: $border-radius-0;
     box-shadow: $box-shadow-1;
@@ -302,9 +302,22 @@
     cursor: pointer;
     transition: all 0.2s ease-out;
 
+    position: relative;
+
     &:hover {
       transform: translateY(-0.2rem) scale(1.005);
       box-shadow: $box-shadow-2;
+
+      &>.projects__ateliers-logo,
+      &>.projects__aouf-logo,
+      &>.projects__wecashup-logo {
+        width: 40%;
+
+        position: absolute;
+        top: 10%;
+        left: 8%;
+        transform: translate(0, 0);
+      }
     }
   }
 
@@ -317,7 +330,14 @@
   &__ateliers-logo,
   &__aouf-logo,
   &__wecashup-logo {
-    width: 16rem;
+    width: 60%;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    transition: all .2s ease-out;
 
     &>img {
       width: 100%;
