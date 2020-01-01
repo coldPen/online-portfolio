@@ -288,13 +288,10 @@
     line-height: 1;
   }
 
-  &__ateliers,
-  &__aouf,
-  &__wecashup {
+  &__item {
     display: flex;
 
     color: $white;
-    // padding: 2.8rem 3.4rem;
     line-height: 1;
     border-radius: $border-radius-0;
     box-shadow: $box-shadow-1;
@@ -304,13 +301,29 @@
 
     position: relative;
 
+    &--ateliers {
+      @extend .projects__item;
+      grid-area: ateliers;
+      @include projects-moving-background($ateliers-1, $ateliers-0);
+    }
+
+    &--aouf {
+      @extend .projects__item;
+      grid-area: aouf;
+      @include projects-moving-background($aouf-1, $aouf-0);
+    }
+
+    &--wecashup {
+      @extend .projects__item;
+      grid-area: wecashup;
+      @include projects-moving-background($wecashup-1, $wecashup-0);
+    }
+
     &:hover {
-      transform: translateY(-0.2rem) scale(1.005);
+      transform: translateY(-0.2rem);
       box-shadow: $box-shadow-2;
 
-      &>.projects__ateliers-logo,
-      &>.projects__aouf-logo,
-      &>.projects__wecashup-logo {
+      &>.projects__logo {
         width: 40%;
 
         position: absolute;
@@ -318,18 +331,21 @@
         left: 8%;
         transform: translate(0, 0);
       }
+
+      &>.projects__preview {
+        &--ateliers {}
+
+        &--aouf {}
+
+        &--wecashup {
+          top: 38%;
+          left: 38%;
+        }
+      }
     }
   }
 
-  &__ateliers {
-    grid-area: ateliers;
-
-    @include projects-moving-background($ateliers-1, $ateliers-0);
-  }
-
-  &__ateliers-logo,
-  &__aouf-logo,
-  &__wecashup-logo {
+  &__logo {
     width: 60%;
 
     position: absolute;
@@ -342,21 +358,41 @@
     &>img {
       width: 100%;
     }
+
+    &--ateliers,
+    &--aouf,
+    &--wecashup {
+      @extend .projects__logo;
+    }
+
   }
 
-  &__aouf {
-    grid-area: aouf;
+  &__preview {
+    position: absolute;
+    top: 100%;
+    left: 100%;
 
-    @include projects-moving-background($aouf-1, $aouf-0);
+    box-shadow: $box-shadow-2;
+
+    transition: all .2s ease-out;
+
+    &>img {
+      width: 100%;
+    }
+
+    &--ateliers {
+      @extend .projects__preview;
+    }
+
+    &--aouf {
+      @extend .projects__preview;
+    }
+
+    &--wecashup {
+      @extend .projects__preview;
+      width: 70%;
+    }
+
   }
 
-  &__aouf-logo {
-    justify-self: flex-end;
-  }
-
-  &__wecashup {
-    grid-area: wecashup;
-
-    @include projects-moving-background($wecashup-1, $wecashup-0);
-  }
 }
