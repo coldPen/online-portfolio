@@ -326,10 +326,21 @@
       &>.projects__logo {
         width: 40%;
 
-        position: absolute;
         top: 10%;
         left: 8%;
         transform: translate(0, 0);
+      }
+
+      &>.projects__keyword {
+        &--ateliers {}
+
+        &--aouf {}
+
+        &--wecashup {
+          top: 10%;
+          left: auto;
+          right: 15%;
+        }
       }
 
       &>.projects__preview {
@@ -338,7 +349,7 @@
         &--aouf {}
 
         &--wecashup {
-          top: 38%;
+          top: 33%;
           left: 38%;
         }
       }
@@ -365,6 +376,27 @@
       @extend .projects__logo;
     }
 
+  }
+
+  &__keyword {
+    position: absolute;
+    top: 10%;
+    left: 100%;
+
+    transition: all .2s ease-out;
+
+    &>p {
+      line-height: 1;
+      color: $blueGrey-9;
+      font-size: 3.2rem;
+      @include nunito-semiBold;
+    }
+
+    &--ateliers,
+    &--aouf,
+    &--wecashup {
+      @extend .projects__keyword;
+    }
   }
 
   &__preview {
