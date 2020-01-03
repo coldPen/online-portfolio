@@ -289,8 +289,6 @@
   }
 
   &__item {
-    display: flex;
-
     color: $white;
     line-height: 1;
     border-radius: $border-radius-0;
@@ -332,21 +330,31 @@
       }
 
       &>.projects__keyword {
-        &--ateliers {}
 
-        &--aouf {}
+        &--aouf {
+          right: 8%;
+        }
+
+        &--ateliers {
+          right: 8%;
+        }
 
         &--wecashup {
-          top: 10%;
-          left: auto;
-          right: 15%;
+          right: 8%;
         }
       }
 
       &>.projects__preview {
-        &--ateliers {}
 
-        &--aouf {}
+        &--aouf {
+          top: 70%;
+          left: 60%;
+        }
+
+        &--ateliers {
+          top: 70%;
+          left: 60%;
+        }
 
         &--wecashup {
           top: 33%;
@@ -357,8 +365,6 @@
   }
 
   &__logo {
-    width: 60%;
-
     position: absolute;
     top: 50%;
     left: 50%;
@@ -370,39 +376,56 @@
       width: 100%;
     }
 
-    &--ateliers,
-    &--aouf,
+    &--ateliers {
+      @extend .projects__logo;
+      width: 60%;
+    }
+
     &--wecashup {
       @extend .projects__logo;
+      width: 60%;
+    }
+
+    &--aouf {
+      @extend .projects__logo;
+      width: 50%;
     }
 
   }
 
   &__keyword {
     position: absolute;
-    top: 10%;
-    left: 100%;
+    right: -100%;
 
     transition: all .2s ease-out;
 
     &>p {
       line-height: 1;
-      color: $blueGrey-9;
-      font-size: 3.2rem;
-      @include nunito-semiBold;
+      color: $white;
+      font-size: 3.6rem;
+      @include nunito-lightItalic;
     }
 
-    &--ateliers,
-    &--aouf,
+    &--aouf {
+      @extend .projects__keyword;
+      top: 20%;
+    }
+
+    &--ateliers {
+      @extend .projects__keyword;
+      top: 20%;
+    }
+
     &--wecashup {
       @extend .projects__keyword;
+      top: 14%;
     }
   }
 
   &__preview {
     position: absolute;
-    top: 100%;
-    left: 100%;
+    top: 120%;
+    left: 120%;
 
     box-shadow: $box-shadow-2;
 
@@ -412,12 +435,16 @@
       width: 100%;
     }
 
-    &--ateliers {
-      @extend .projects__preview;
-    }
-
     &--aouf {
       @extend .projects__preview;
+      width: 35%;
+      transform: skew(60deg, -30deg);
+    }
+
+    &--ateliers {
+      @extend .projects__preview;
+      width: 35%;
+      transform: skew(60deg, -30deg);
     }
 
     &--wecashup {

@@ -13,6 +13,11 @@
   font-family: $nunito;
   font-weight: 400;
 }
+@mixin nunito-lightItalic {
+  font-family: $nunito;
+  font-weight: 400;
+  font-style: italic;
+}
 
 @mixin nunito-semiBold {
   font-family: $nunito;
