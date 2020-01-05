@@ -317,7 +317,8 @@
       @include projects-moving-background($wecashup-1, $wecashup-0);
     }
 
-    &:hover {
+    &:hover,
+    &:focus {
       transform: translateY(-0.2rem);
       box-shadow: $box-shadow-2;
 
@@ -330,12 +331,11 @@
       }
 
       &>.projects__keyword {
-
-        &--aouf {
+        &--ateliers {
           right: 8%;
         }
 
-        &--ateliers {
+        &--aouf {
           right: 8%;
         }
 
@@ -346,14 +346,14 @@
 
       &>.projects__preview {
 
-        &--aouf {
-          top: 70%;
-          left: 60%;
+        &--ateliers {
+          top: 90%;
+          left: 20%;
         }
 
-        &--ateliers {
-          top: 70%;
-          left: 60%;
+        &--aouf {
+          top: 90%;
+          left: 30%;
         }
 
         &--wecashup {
@@ -426,6 +426,8 @@
     position: absolute;
     top: 120%;
     left: 120%;
+
+    transform-origin: top left;
 
     box-shadow: $box-shadow-2;
 
