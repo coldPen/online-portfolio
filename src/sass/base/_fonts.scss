@@ -1,13 +1,13 @@
 @font-face {
   font-family: "Roboto";
-  src: url("../fonts/Roboto-Black.ttf") format("truetype");
-  font-weight: 900;
+  src: url("../fonts/Roboto-Regular.ttf") format("truetype");
+  font-weight: 400;
 }
 
 @font-face {
-  font-family: "Nunito";
-  src: url("../fonts/Nunito-Regular.ttf") format("truetype");
-  font-weight: 400;
+  font-family: "Roboto";
+  src: url("../fonts/Roboto-Black.ttf") format("truetype");
+  font-weight: 900;
 }
 
 @font-face {
@@ -15,6 +15,12 @@
   src: url("../fonts/Nunito-LightItalic.ttf") format("truetype");
   font-weight: 300;
   font-style: italic;
+}
+
+@font-face {
+  font-family: "Nunito";
+  src: url("../fonts/Nunito-Regular.ttf") format("truetype");
+  font-weight: 400;
 }
 
 @font-face {

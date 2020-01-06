@@ -8,18 +8,17 @@
   </head>
   <body class="body">
     <!-- CONTENT -->
-    <header class="header">
-      <nav class="nav">
-        <ul class="nav__list"></ul>
-      </nav>
-    </header>
-
     <main class="main">
       <section class="hero">
         <div class="hero__headings">
           <h1 class="hero__heading heading-primary">
-            Développeur freelance<br />
-            Sass, JS, React & Gatsby
+            <span class="hero__heading--light heading-primary--regular">
+              Lucas Leroux
+            </span>
+            <span class="hero__heading--white heading-primary--black">
+              Développeur freelance<br />
+              Sass, JS, React & Gatsby
+            </span>
           </h1>
           <h2 class="hero__subheading heading-secondary">
             Sites & Applications Web
@@ -297,8 +296,30 @@
           </div>
         </div>
       </section>
-      <section class="contact"></section>
     </main>
+
+    <footer class="contact">
+      <a href="tel:+33645716476" class="contact__link--tel">
+        <svg class="contact__link-icon">
+          <use xlink:href="./assets/icons.svg#phone" />
+        </svg>
+        06 45 71 64 76
+      </a>
+      <a href="mailto:lucas.leroux@protonmail.com" class="contact__link--mail">
+        <svg class="contact__link-icon">
+          <use xlink:href="./assets/icons.svg#protonmail" />
+        </svg>
+        lucas.leroux@protonmail.com
+      </a>
+      <a
+        href="https://www.linkedin.com/in/lucasleroux1/"
+        class="contact__social"
+      >
+        <svg class="contact__social-icon">
+          <use xlink:href="./assets/icons.svg#linkedin" />
+        </svg>
+      </a>
+    </footer>
 
     <!-- WAVES SVG -->
     <div class="hidden">

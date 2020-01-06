@@ -8,15 +8,21 @@
 
 // Headings
 .heading-primary {
-  @include roboto-black;
   font-size: 4.8rem;
   line-height: 1.125;
+
+  &--regular {
+    @include roboto-regular;
+  }
+
+  &--black {
+    @include roboto-black;
+  }
 }
 
 .heading-secondary {
   @include nunito-regular;
   font-size: 3.2rem;
-  // line-height: 1.25;
 
   &--bold {
     @extend .heading-secondary;
