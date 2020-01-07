@@ -1,64 +1,30 @@
+/// Remove the unit of a length
+/// @param {Number} $number - Number to remove unit from
+/// @return {Number} - Unitless number
+@function strip-unit($number) {
+  @if type-of($number)=='number'and not unitless($number) {
+    @return $number / ($number * 0 + 1);
+  }
+
+  @return $number;
+}
+
 // Media query manager
-@mixin respond($breakpoint) {
-  // Website was designed desktop first,
-  // on a screen with a width between 1200px and 1800px
+@mixin respond($direction, $breakpoint-px) {
+  $feature: null;
 
-  // Until 400px / 16px = 25em
-  @if $breakpoint==until-400px {
-    @media only screen and (max-width: 25em) {
-      @content;
-    }
+  @if $direction==until {
+    $feature: max-width;
   }
 
-  // Until 600px / 16px = 37.5em
-  @if $breakpoint==until-600px {
-    @media only screen and (max-width: 37.5em) {
-      @content;
-    }
+  @else if $direction==from {
+    $feature: min-width;
   }
 
-  // Until 800px / 16px = 50em
-  @if $breakpoint==until-800px {
-    @media only screen and (max-width: 50em) {
-      @content;
-    }
-  }
+  $breakpoint-em: #{strip-unit($breakpoint-px) / 16}em;
 
-  // Until 900px / 16px = 56.25em
-  @if $breakpoint==until-900px {
-    @media only screen and (max-width: 56.25em) {
-      @content;
-    }
-  }
-
-  // Until 1200px / 16px = 75em
-  @if $breakpoint==until-1200px {
-    @media only screen and (max-width: 75em) {
-      @content;
-    }
-  }
-
-  // Until 1300px / 16px = 81.25em
-  @if $breakpoint==until-1300px {
-    @media only screen and (max-width: 81.25em) {
-      @content;
-    }
-  }
-
-  // Until 1400px / 16px = 87.5em
-  @if $breakpoint==until-1400px {
-    @media only screen and (max-width: 87.5em) {
-      @content;
-    }
-  }
-
-  /* "NORMAL" DESKTOP WIDTH | No breakpoint */
-
-  // From 1800px / 16px = 112.5em
-  @if $breakpoint==from-1800px {
-    @media only screen and (min-width: 112.5em) {
-      @content;
-    }
+  @media only screen and ($feature: $breakpoint-em) {
+    @content;
   }
 }
 

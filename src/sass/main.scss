@@ -5,12 +5,11 @@
 
 // 2. Base stuff
 @import "base/animations", "base/base", "base/fonts", "base/typography",
-  "base/helpers";
+"base/helpers";
 
 // 3. Layout-related sections
 
 // 4. Components
-@import "components/header";
 
 // 5. Page-specific styles
 @import "pages/home";
