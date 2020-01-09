@@ -6,7 +6,7 @@
     ".     text  .     illustration .    "
     "intro intro intro intro        intro";
   align-items: center;
-  row-gap: 12rem;
+  row-gap: 16rem;
 
   padding: 12rem 0 0;
   background: linear-gradient(to right,
@@ -19,30 +19,88 @@
 
   @include respond(until, 1400px) {
     grid-template-columns: 12rem 12fr 4rem 8fr 12rem;
-    row-gap: 10rem;
+    row-gap: 14rem;
+    padding: 10rem 0 0;
+  }
+
+  @include respond(until, 1300px) {
+    grid-template-columns: 12rem 12fr 4rem 8fr 12rem;
     padding: 10rem 0 0;
   }
 
   @include respond(until, 1100px) {
     grid-template-columns: 10rem 12fr 2rem 8fr 10rem;
-    row-gap: 8rem;
+    row-gap: 13rem;
     padding: 8rem 0 0;
   }
 
   @include respond(until, 800px) {
+    grid-template-columns: 8rem 12fr 2rem 8fr 8rem;
+    row-gap: 14rem;
+    padding: 6rem 0 0;
+  }
+
+  @include respond(until, 700px) {
+    grid-template-columns: 8rem 1fr 8rem;
     grid-template-areas:
-      ".     illustration illustration illustration .    "
-      ".     text         text         text         .    "
-      "intro intro        intro        intro        intro";
-    row-gap: 4rem;
+      ".     illustration .    "
+      ".     text         .    "
+      "intro intro        intro";
+    row-gap: 0;
+    padding: 4rem 0 0;
+    background: linear-gradient(to top,
+        rgba($blue-0, .975),
+        rgba($blue-4, .975)),
+      $circuit-board;
+  }
+
+  @include respond(until, 600px) {
+    grid-template-columns: 6rem 1fr 6rem;
     padding: 4rem 0 0;
   }
 
   &__headings {
     grid-area: text;
 
-    @include respond(until, 800px) {
+    @include respond(until, 700px) {
       text-align: center;
+    }
+
+
+    // Helper !!!!for DEVELOPMENT only!!!!
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: red;
+      opacity: 0.8;
+      width: 100%;
+      height: 12rem;
+      z-index: 999;
+
+      @include respond(until, 1400px) {
+        height: 10rem;
+      }
+
+      @include respond(until, 1300px) {
+        height: 10rem;
+      }
+
+      @include respond(until, 1100px) {
+        height: 8rem;
+      }
+
+      @include respond(until, 800px) {
+        height: 6rem;
+      }
+
+      @include respond(until, 700px) {
+        height: 4rem;
+      }
+
     }
   }
 
@@ -73,10 +131,48 @@
     &>img {
       width: 100%;
 
-      @include respond(until, 800px) {
-        width: 40%;
+      @include respond(until, 700px) {
+        width: calc(100% / 3);
       }
     }
+
+
+    // Helper !!!!for DEVELOPMENT only!!!!
+    // position:relative;
+
+    // &::after {
+    //   content: "";
+    //   position: absolute;
+    //   top: 100%;
+    //   background: green;
+    //   width: 100%;
+    //   height: 12rem;
+    //   z-index: 999;
+
+    //   @include respond(until, 1400px) {
+    //     height: 10rem;
+    //   }
+
+    //   @include respond(until, 1300px) {
+    //     height: 10rem;
+    //   }
+
+    //   @include respond(until, 1100px) {
+    //     height: 8rem;
+    //   }
+
+    //   @include respond(until, 800px) {
+    //     height: 6rem;
+    //   }
+
+    //   @include respond(until, 700px) {
+    //     height: 4rem;
+    //   }
+
+    // }
+
+
+
   }
 
   &__intro {
@@ -86,6 +182,14 @@
     align-items: end;
 
     position: relative;
+
+    @include respond(until, 700px) {
+      margin-top: 15rem;
+    }
+
+    @include respond(until, 600px) {
+      margin-top: 15rem;
+    }
   }
 
   &__waves {
@@ -133,6 +237,17 @@
     @include respond(until, 1100px) {
       margin: 0 10rem;
     }
+
+    @include respond(until, 800px) {
+      margin: 0 8rem;
+
+      display: block;
+      @include clearfix;
+    }
+
+    @include respond(until, 600px) {
+      margin: 0 6rem;
+    }
   }
 
   &__portrait {
@@ -144,6 +259,13 @@
       border-radius: 50%;
       width: 12rem;
       height: 12rem;
+    }
+
+    @include respond(until, 800px) {
+      margin: .5rem 2rem 2rem 0;
+      shape-outside: circle(50%) border-box;
+      shape-margin: 2rem;
+      float: left;
     }
   }
 
@@ -269,7 +391,8 @@
     grid-area: categories;
 
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    // grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
     column-gap: 2.6rem;
   }
 

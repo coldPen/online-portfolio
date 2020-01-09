@@ -28,6 +28,15 @@
   }
 }
 
+/* Clearfix for float positioning */
+@mixin clearfix {
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
 /* Fonts family + weight */
 @mixin roboto-regular {
   font-family: $roboto;
