@@ -88,7 +88,7 @@
       width: 100%;
 
       @include respond(until, 700px) {
-        width: calc(100% / 3);
+        width: 60%;
       }
     }
 
@@ -224,8 +224,9 @@
     padding: 8rem $gutter-1 8rem;
   }
 
-  @include respond(until, 400px) {
-    grid-template-columns: $gutter-0 1fr $gutter-0;
+  @include respond(until, 700px) {
+    padding: 10rem $gutter-1 10rem;
+    row-gap: 10rem;
   }
 }
 
@@ -270,6 +271,7 @@
 
   &__text {
     grid-column: 3 / 4;
+    grid-row: 1 / 2;
 
     @include respond(until, 700px) {
       grid-column: 1 / 2;
@@ -281,19 +283,34 @@
 .react {
   grid-template-columns: 12fr 4rem 8fr;
 
+  @include respond(until, 700px) {
+    grid-template-columns: auto;
+    grid-template-rows: min-content 4rem min-content;
+  }
+
   &__text {
     grid-column: 1 / 2;
+    grid-row: 1 / 2;
+
+    @include respond(until, 700px) {
+      grid-column: 1 / 2;
+      grid-row: 3 / 4;
+    }
   }
 
   &__illustration {
     grid-column: 3 / 4;
+    grid-row: 1 / 2;
+
+    @include respond(until, 700px) {
+      grid-column: 1 / 2;
+      grid-row: 1 / 2;
+    }
   }
 }
 
 // Skills section
 .skills {
-  margin: -.1rem 0 0;
-  z-index: 0;
   position: relative;
 
   background: linear-gradient(to right,
@@ -303,7 +320,7 @@
   background-attachment: fixed, fixed;
 
   display: grid;
-  grid-template-columns: 14rem 1fr 14rem;
+  grid-template-columns: calc(#{$gutter-1} + 10rem) 1fr calc(#{$gutter-1} + 10rem);
   grid-template-areas:
     "top-waves    top-waves    top-waves   "
     ".            heading      .           "
@@ -311,29 +328,42 @@
     "bottom-waves bottom-waves bottom-waves";
   row-gap: 2rem;
 
-  &__top-waves {
-    grid-area: top-waves;
-
-    font-size: 0;
-    margin-bottom: 4rem;
-
-    overflow: hidden;
-
-    &>svg {
-      transform: scale(1.01) rotate(180deg);
-    }
+  @include respond(until, 900px) {
+    grid-template-columns: calc(#{$gutter-1} + 5rem) 1fr calc(#{$gutter-1} + 5rem);
   }
 
-  &__bottom-waves {
-    grid-area: bottom-waves;
+  @include respond(until, 700px) {
+    grid-template-columns: $gutter-1 1fr $gutter-1;
+  }
 
+  @include respond(until, 400px) {
+    grid-template-columns: $gutter-0 1fr $gutter-0;
+  }
+
+  &__waves {
     font-size: 0;
-    margin-top: 4rem;
-
     overflow: hidden;
 
-    &>svg {
-      transform: scale(1.01);
+    &--top {
+      @extend .skills__waves;
+      grid-area: top-waves;
+
+      margin-bottom: 1rem;
+
+      &>svg {
+        transform: scale(1.01) rotate(180deg);
+      }
+    }
+
+    &--bottom {
+      @extend .skills__waves;
+      grid-area: bottom-waves;
+
+      margin-top: 1rem;
+
+      &>svg {
+        transform: scale(1.01);
+      }
     }
   }
 
@@ -349,9 +379,12 @@
     grid-area: categories;
 
     display: grid;
-    // grid-template-columns: repeat(4, 1fr);
-    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-    column-gap: 2.6rem;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.6rem;
+
+    @include respond(until, 500px) {
+      grid-template-columns: auto;
+    }
   }
 
   &__category {
