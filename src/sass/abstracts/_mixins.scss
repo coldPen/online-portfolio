@@ -76,7 +76,11 @@
       $blue-4 50%,
       $color-0 50%,
       $color-1 100%);
-  background-size: 260%;
+  background-size: 280%;
+
+  @include respond(until, 1200px) {
+    background-size: 280%;
+  }
 
   &:hover,
   &:focus {

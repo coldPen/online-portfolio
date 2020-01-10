@@ -448,21 +448,23 @@
 
 // Projects section
 .projects {
-  margin: -.1rem 0 0;
-  padding: 8.1rem calc(14rem + 10rem) 8rem;
+  // margin: -.1rem 0 0;
+  padding: 8rem 0 8rem;
   z-index: 1;
   position: relative;
 
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: calc(#{$gutter-1} + 10rem) 1fr 2.8rem 1fr calc(#{$gutter-1} + 10rem);
   grid-template-rows: min-content 20rem 20rem;
   grid-template-areas:
-    "heading  heading "
-    "ateliers wecashup"
-    "aouf     wecashup";
-  gap: 2.8rem;
+    ". heading  heading heading  ."
+    ". ateliers .       wecashup ."
+    ". aouf     .       wecashup .";
+  row-gap: 2.8rem;
 
   background: $blueGrey-9;
+
+  @include respond(until, 1200px) {}
 
   &__heading {
     grid-area: heading;
