@@ -9,11 +9,9 @@
   row-gap: 12rem;
 
   padding: 12rem 0 0;
-  background: linear-gradient(
-      to right,
+  background: linear-gradient(to right,
       rgba($blue-0, 0.975),
-      rgba($blue-4, 0.975)
-    ),
+      rgba($blue-4, 0.975)),
     $circuit-board;
   background-attachment: fixed, fixed;
 
@@ -44,11 +42,9 @@
       "intro intro        intro";
     row-gap: 0;
     padding: 4rem 0 0;
-    background: linear-gradient(
-        to top,
+    background: linear-gradient(to top,
         rgba($blue-0, 0.975),
-        rgba($blue-4, 0.975)
-      ),
+        rgba($blue-4, 0.975)),
       $circuit-board;
   }
 
@@ -88,7 +84,7 @@
 
     font-size: 0;
 
-    & > img {
+    &>img {
       width: 100%;
 
       @include respond(until, 700px) {
@@ -119,7 +115,7 @@
     grid-template-rows: 1fr min-content 1fr;
     height: 100%;
 
-    & > svg {
+    &>svg {
       grid-row: 2 / 3;
       transform: scale(1.01);
     }
@@ -184,7 +180,7 @@
 
     font-size: 0;
 
-    & > img {
+    &>img {
       border-radius: 50%;
       width: 12rem;
       height: 12rem;
@@ -244,7 +240,7 @@
     font-size: 0;
     text-align: center;
 
-    & > img {
+    &>img {
       width: 100%;
 
       @include respond(until, 700px) {
@@ -317,19 +313,14 @@
 .skills {
   position: relative;
 
-  background: linear-gradient(
-      to right,
+  background: linear-gradient(to right,
       rgba($blue-0, 0.975),
-      rgba($blue-4, 0.975)
-    ),
+      rgba($blue-4, 0.975)),
     $signal;
   background-attachment: fixed, fixed;
 
   display: grid;
-  grid-template-columns:
-    calc(#{$gutter-1} + 10rem)
-    1fr
-    calc(#{$gutter-1} + 10rem);
+  grid-template-columns: calc(#{$gutter-1} + 10rem) 1fr calc(#{$gutter-1} + 10rem);
   grid-template-areas:
     "top-waves    top-waves    top-waves   "
     ".            heading      .           "
@@ -338,10 +329,7 @@
   row-gap: 2rem;
 
   @include respond(until, 900px) {
-    grid-template-columns:
-      calc(#{$gutter-1} + 5rem)
-      1fr
-      calc(#{$gutter-1} + 5rem);
+    grid-template-columns: calc(#{$gutter-1} + 5rem) 1fr calc(#{$gutter-1} + 5rem);
   }
 
   @include respond(until, 700px) {
@@ -362,7 +350,7 @@
 
       margin-bottom: 1rem;
 
-      & > svg {
+      &>svg {
         transform: scale(1.01) rotate(180deg);
       }
     }
@@ -373,7 +361,7 @@
 
       margin-top: 1rem;
 
-      & > svg {
+      &>svg {
         transform: scale(1.01);
       }
     }
@@ -465,14 +453,9 @@
   position: relative;
 
   display: grid;
-  grid-template-columns:
-    calc(#{$gutter-1} + 10rem)
-    1fr 2.8rem 1fr
-    calc(#{$gutter-1} + 10rem);
+  grid-template-columns: calc(#{$gutter-1} + 10rem) 1fr 2.8rem 1fr calc(#{$gutter-1} + 10rem);
   grid-template-rows:
-    min-content
-    20rem
-    20rem;
+    min-content 20rem 20rem;
   grid-template-areas:
     ". heading  heading heading  ."
     ". ateliers .       wecashup ."
@@ -483,21 +466,14 @@
 
   @include respond(until, 1200px) {
     grid-template-columns:
-      $gutter-1
-      1fr 2.8rem 1fr
-      $gutter-1;
+      $gutter-1 1fr 2.8rem 1fr $gutter-1;
   }
 
   @include respond(until, 700px) {
     grid-template-columns:
-      $gutter-1
-      1fr
-      $gutter-1;
+      $gutter-1 1fr $gutter-1;
     grid-template-rows:
-      min-content
-      20rem
-      20rem
-      20rem;
+      min-content 20rem 20rem 20rem;
     grid-template-areas:
       ". heading  ."
       ". ateliers ."
@@ -539,7 +515,7 @@
     }
 
     @mixin full-display {
-      & > .projects__logo {
+      &>.projects__logo {
         width: 40%;
 
         top: 10%;
@@ -553,15 +529,15 @@
           left: 4rem;
 
           &--ateliers {
-            height: 30%;
+            height: 20%;
           }
 
           &--aouf {
-            height: 50%;
+            height: 40%;
           }
 
           &--wecashup {
-            height: 40%;
+            height: 30%;
           }
         }
 
@@ -570,12 +546,14 @@
         }
       }
 
-      & > .projects__keyword {
+      &>.projects__keyword {
         &--ateliers {
           right: 8%;
+
           @include respond(until, 700px) {
             right: 4rem;
           }
+
           @include respond(until, 400px) {
             right: 2rem;
           }
@@ -583,9 +561,11 @@
 
         &--aouf {
           right: 8%;
+
           @include respond(until, 700px) {
             right: 4rem;
           }
+
           @include respond(until, 400px) {
             right: 2rem;
           }
@@ -593,16 +573,18 @@
 
         &--wecashup {
           right: 8%;
+
           @include respond(until, 700px) {
             right: 4rem;
           }
+
           @include respond(until, 400px) {
             right: 2rem;
           }
         }
       }
 
-      & > .projects__preview {
+      &>.projects__preview {
         &--ateliers {
           top: 90%;
           left: 20%;
@@ -630,14 +612,17 @@
         &--wecashup {
           top: 33%;
           left: 38%;
+
           @include respond(until, 700px) {
             top: 70%;
             left: 30%;
           }
+
           @include respond(until, 500px) {
             top: 80%;
             left: 32%;
           }
+
           @include respond(until, 400px) {
             top: 70%;
             left: 18%;
@@ -666,44 +651,51 @@
 
     transition: all 0.2s ease-out;
 
-    & > img {
+    &>img {
       width: 100%;
+
       @include respond(until, 700px) {
         width: auto;
         height: 100%;
-      }
-      @include respond(until, 400px) {
-        height: 60%;
       }
     }
 
     &--ateliers {
       width: 60%;
+
       @include respond(until, 700px) {
         width: auto;
-        height: 80%;
+        height: 56%;
       }
+
       @include respond(until, 400px) {
-        height: 60%;
+        height: 40%;
       }
     }
 
     &--aouf {
       width: 50%;
+
       @include respond(until, 700px) {
         width: auto;
         height: 80%;
       }
+
       @include respond(until, 400px) {
-        height: 60%;
+        height: 56%;
       }
     }
 
     &--wecashup {
       width: 60%;
+
       @include respond(until, 700px) {
         width: auto;
         height: 80%;
+      }
+
+      @include respond(until, 400px) {
+        height: 56%;
       }
     }
   }
@@ -714,14 +706,16 @@
 
     transition: all 0.2s ease-out;
 
-    & > p {
+    &>p {
       line-height: 1;
       color: $white;
       font-size: 3.6rem;
       @include nunito-lightItalic;
+
       @include respond(until, 800px) {
         font-size: 3.2rem;
       }
+
       @include respond(until, 400px) {
         font-size: 2.6rem;
       }
@@ -729,6 +723,7 @@
 
     &--ateliers {
       top: 20%;
+
       @include respond(until, 400px) {
         top: 2rem;
       }
@@ -736,6 +731,7 @@
 
     &--aouf {
       top: 20%;
+
       @include respond(until, 400px) {
         top: 2rem;
       }
@@ -743,9 +739,11 @@
 
     &--wecashup {
       top: 14%;
+
       @include respond(until, 700px) {
         top: 20%;
       }
+
       @include respond(until, 400px) {
         top: 2rem;
       }
@@ -763,7 +761,7 @@
 
     transition: all 0.2s ease-out;
 
-    & > img {
+    &>img {
       width: 100%;
     }
 
@@ -817,7 +815,7 @@
       transform: translateY(-0.2rem);
       box-shadow: $box-shadow-1;
 
-      & > .contact__link-icon {
+      &>.contact__link-icon {
         fill: $blueGrey-9;
       }
     }
@@ -851,7 +849,7 @@
     transition: all 0.2s ease-out;
 
     &:hover {
-      & > .contact__social-icon {
+      &>.contact__social-icon {
         fill: $yellow-3;
       }
     }
