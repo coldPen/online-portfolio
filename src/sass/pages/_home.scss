@@ -84,10 +84,21 @@
 
     font-size: 0;
 
+    // 0,574578626869
+    // padding-bottom: 57.4578626869%;
+    // /*this is your height/width ratio*/
+    // height: 0;
+    // position: relative;
+
     &>img {
+      // position: absolute;
+      // top: 0;
+      // left: 0;
+      height: 100%;
       width: 100%;
 
       @include respond(until, 700px) {
+        height: 60%;
         width: 60%;
       }
     }
