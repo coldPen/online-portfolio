@@ -220,10 +220,6 @@
   display: grid;
   row-gap: 8rem;
 
-  @include respond(until, 1400px) {
-    padding: 8rem $gutter-1 8rem;
-  }
-
   @include respond(until, 700px) {
     padding: 10rem $gutter-1 10rem;
     row-gap: 10rem;
@@ -345,10 +341,9 @@
     overflow: hidden;
 
     &--top {
-      @extend .skills__waves;
       grid-area: top-waves;
 
-      margin-bottom: 1rem;
+      margin-bottom: 6rem;
 
       &>svg {
         transform: scale(1.01) rotate(180deg);
@@ -356,10 +351,9 @@
     }
 
     &--bottom {
-      @extend .skills__waves;
       grid-area: bottom-waves;
 
-      margin-top: 1rem;
+      margin-top: 6rem;
 
       &>svg {
         transform: scale(1.01);
@@ -438,7 +432,6 @@
     margin-right: 0.6rem;
 
     &--smaller {
-      @extend .skills__icon;
       height: 1.8rem;
       width: 1.8rem;
       margin: 0.2rem 0.6rem 0.2rem 0.4rem;
@@ -789,9 +782,20 @@
 // Contact section
 .contact {
   display: flex;
+
   background: $blueGrey-8;
   box-shadow: inset $box-shadow-0;
-  padding: 2rem 14rem;
+  padding: 2rem $gutter-1;
+
+  @include respond(until, 600px) {
+    justify-items: space-between;
+  }
+
+  @include respond(until, 500px) {
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+  }
 
   &__link {
     display: flex;
@@ -801,11 +805,16 @@
     color: $blueGrey-0;
     font-size: 1.6rem;
     line-height: 1;
+    width: max-content;
     text-decoration: none;
     padding: 0.8rem 1.4rem;
     border-radius: 10rem;
     box-shadow: $box-shadow-0;
     transition: all 0.2s ease-out;
+
+    @include respond(until, 500px) {
+      margin-bottom: 1.6rem;
+    }
 
     &:hover,
     &:link:hover,
@@ -825,6 +834,14 @@
     &--tel:active {
       @extend .contact__link;
       margin-right: 2rem;
+
+      @include respond(until, 600px) {
+        margin-right: auto;
+      }
+
+      @include respond(until, 500px) {
+        margin-right: 0;
+      }
     }
 
     &--mail,
@@ -832,6 +849,10 @@
     &--mail:active {
       @extend .contact__link;
       margin-right: auto;
+
+      @include respond(until, 500px) {
+        margin-right: 0;
+      }
     }
   }
 
