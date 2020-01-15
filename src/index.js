@@ -1,18 +1,36 @@
 // Import SASS stylesheets
 import "./sass/main.scss";
 
-const projects = ["ateliers", "aouf", "wecashup"];
+const styleSheet = document.styleSheets[0];
+const insertionIndex =
+  Array.from(styleSheet.cssRules).findIndex(
+    cssRule => cssRule.selectorText === `.projects__item`
+  ) + 1;
 
-projects.forEach(project =>
-  document.getElementById(project).addEventListener("click", e => {
-    // console.log(e.currentTarget.getBoundingClientRect());
-    const popup = document.createElement("div");
-    popup.classList.add("popup");
-    const content = Array.from(
-      document.getElementById(`${project}-content`).children
+const projects = [`ateliers`, `aouf`, `wecashup`];
+
+projects.forEach(project => {
+  const tile = document.getElementById(project);
+
+  tile.addEventListener(`click`, () => {
+    const tileCoords = tile.getBoundingClientRect();
+
+    const posProperties = {
+      top: tileCoords.y + 2, // Because it's 2px too high on every browser for some reason
+      left: tileCoords.x,
+      width: tileCoords.width,
+      height: tileCoords.height
+    };
+
+    const posRules = Object.entries(posProperties)
+      .map(([key, value]) => `${key}: ${value / 10}rem;`)
+      .join(` `);
+    styleSheet.insertRule(
+      `.projects__item--${project} { position: fixed; ${posRules} transition: all 10s ease-out; }`,
+      insertionIndex
     );
-    content.forEach(child => popup.appendChild(child));
-    const body = document.getElementById("body");
-    body.appendChild(popup);
-  })
-);
+    console.log(styleSheet);
+
+    tile.classList.add(`projects__item--active`);
+  });
+});
