@@ -13,6 +13,8 @@ projects.forEach(project => {
   const tile = document.getElementById(project);
 
   tile.addEventListener(`click`, () => {
+    tile.blur();
+
     const tileCoords = tile.getBoundingClientRect();
 
     const posProperties = {
@@ -29,8 +31,7 @@ projects.forEach(project => {
       `.projects__item--${project} { position: fixed; ${posRules} transition: all 10s ease-out; }`,
       insertionIndex
     );
-    console.log(styleSheet);
 
-    tile.classList.add(`projects__item--active`);
+    setTimeout(() => tile.classList.add(`projects__item--active`), 20);
   });
 });
