@@ -3,3 +3,8 @@
     height: 0;
     visibility: hidden;
 }
+
+.body.noScroll {
+    position: fixed;
+    overflow-y: scroll;
+}

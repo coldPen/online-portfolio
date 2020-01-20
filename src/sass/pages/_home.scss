@@ -15,26 +15,24 @@
     $circuit-board;
   background-attachment: fixed, fixed;
 
-  // z-index: 0;
-
-  @include respond(until, 1400px) {
+  @include respond(to, 1400px) {
     grid-template-columns: $gutter-1 12fr 4rem 8fr $gutter-1;
     row-gap: 10rem;
     padding: 10rem 0 0;
   }
 
-  @include respond(until, 1100px) {
+  @include respond(to, 1100px) {
     grid-template-columns: $gutter-1 12fr 2rem 8fr $gutter-1;
     row-gap: 8rem;
     padding: 8rem 0 0;
   }
 
-  @include respond(until, 800px) {
+  @include respond(to, 800px) {
     row-gap: 6rem;
     padding: 6rem 0 0;
   }
 
-  @include respond(until, 700px) {
+  @include respond(to, 700px) {
     grid-template-columns: $gutter-1 1fr $gutter-1;
     grid-template-areas:
       ".     illustration .    "
@@ -48,14 +46,14 @@
       $circuit-board;
   }
 
-  @include respond(until, 400px) {
+  @include respond(to, 400px) {
     grid-template-columns: $gutter-0 1fr $gutter-0;
   }
 
   &__headings {
     grid-area: text;
 
-    @include respond(until, 700px) {
+    @include respond(to, 700px) {
       text-align: center;
     }
   }
@@ -88,13 +86,13 @@
       height: 100%;
       width: 100%;
 
-      @include respond(until, 700px) {
+      @include respond(to, 700px) {
         height: 60%;
         width: 60%;
       }
     }
 
-    @include respond(until, 700px) {
+    @include respond(to, 700px) {
       margin-bottom: 2rem;
     }
   }
@@ -144,35 +142,35 @@
     border-radius: 0.8rem;
     box-shadow: $box-shadow-4;
 
-    z-index: 2;
+    z-index: 1;
 
-    @include respond(until, 1400px) {
+    @include respond(to, 1400px) {
       margin: 0 calc(#{$gutter-1} + 9rem);
     }
 
-    @include respond(until, 1200px) {
+    @include respond(to, 1200px) {
       margin: 0 calc(#{$gutter-1} + 6rem);
     }
 
-    @include respond(until, 1100px) {
+    @include respond(to, 1100px) {
       margin: 0 $gutter-1;
     }
 
-    @include respond(until, 800px) {
+    @include respond(to, 800px) {
       display: block;
       @include clearfix;
     }
 
-    @include respond(until, 700px) {
+    @include respond(to, 700px) {
       margin: 4rem $gutter-1 0;
     }
 
-    @include respond(until, 500px) {
+    @include respond(to, 500px) {
       display: flex;
       flex-direction: column;
     }
 
-    @include respond(until, 400px) {
+    @include respond(to, 400px) {
       margin: 4rem $gutter-0 0;
     }
   }
@@ -188,14 +186,14 @@
       height: 12rem;
     }
 
-    @include respond(until, 800px) {
+    @include respond(to, 800px) {
       margin: 0.5rem 2rem 2rem 0;
       shape-outside: circle(50%) border-box;
       shape-margin: 2rem;
       float: left;
     }
 
-    @include respond(until, 500px) {
+    @include respond(to, 500px) {
       margin: 0 0 1.8rem 0;
       shape-outside: none;
       shape-margin: initial;
@@ -206,7 +204,7 @@
   &__presentation {
     grid-column: 3 / 4;
 
-    @include respond(until, 500px) {
+    @include respond(to, 500px) {
       text-align: justify;
     }
   }
@@ -216,13 +214,12 @@
 .presentation {
   padding: 8rem $gutter-1 8rem;
   position: relative;
-  z-index: 1;
   background: $blueGrey-9;
 
   display: grid;
   row-gap: 8rem;
 
-  @include respond(until, 700px) {
+  @include respond(to, 700px) {
     padding: 10rem $gutter-1 10rem;
     row-gap: 10rem;
   }
@@ -241,7 +238,7 @@
     &>img {
       width: 100%;
 
-      @include respond(until, 700px) {
+      @include respond(to, 700px) {
         width: 60%;
       }
     }
@@ -257,7 +254,7 @@
 .sass {
   grid-template-columns: 8fr 4rem 12fr;
 
-  @include respond(until, 700px) {
+  @include respond(to, 700px) {
     grid-template-columns: auto;
     grid-template-rows: min-content 4rem min-content;
   }
@@ -271,7 +268,7 @@
     grid-column: 3 / 4;
     grid-row: 1 / 2;
 
-    @include respond(until, 700px) {
+    @include respond(to, 700px) {
       grid-column: 1 / 2;
       grid-row: 3 / 4;
     }
@@ -281,7 +278,7 @@
 .react {
   grid-template-columns: 12fr 4rem 8fr;
 
-  @include respond(until, 700px) {
+  @include respond(to, 700px) {
     grid-template-columns: auto;
     grid-template-rows: min-content 4rem min-content;
   }
@@ -290,7 +287,7 @@
     grid-column: 1 / 2;
     grid-row: 1 / 2;
 
-    @include respond(until, 700px) {
+    @include respond(to, 700px) {
       grid-column: 1 / 2;
       grid-row: 3 / 4;
     }
@@ -300,7 +297,7 @@
     grid-column: 3 / 4;
     grid-row: 1 / 2;
 
-    @include respond(until, 700px) {
+    @include respond(to, 700px) {
       grid-column: 1 / 2;
       grid-row: 1 / 2;
     }
@@ -326,15 +323,15 @@
     "bottom-waves bottom-waves bottom-waves";
   row-gap: 2rem;
 
-  @include respond(until, 900px) {
+  @include respond(to, 900px) {
     grid-template-columns: calc(#{$gutter-1} + 5rem) 1fr calc(#{$gutter-1} + 5rem);
   }
 
-  @include respond(until, 700px) {
+  @include respond(to, 700px) {
     grid-template-columns: $gutter-1 1fr $gutter-1;
   }
 
-  @include respond(until, 400px) {
+  @include respond(to, 400px) {
     grid-template-columns: $gutter-0 1fr $gutter-0;
   }
 
@@ -378,7 +375,7 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 2.6rem;
 
-    @include respond(until, 500px) {
+    @include respond(to, 500px) {
       grid-template-columns: auto;
     }
   }
@@ -444,7 +441,6 @@
 // Projects section
 .projects {
   padding: 8rem 0 8rem;
-  z-index: 1;
   position: relative;
 
   display: grid;
@@ -459,12 +455,12 @@
 
   background: $blueGrey-9;
 
-  @include respond(until, 1200px) {
+  @include respond(to, 1200px) {
     grid-template-columns:
       $gutter-1 1fr 2.8rem 1fr $gutter-1;
   }
 
-  @include respond(until, 700px) {
+  @include respond(to, 700px) {
     grid-template-columns:
       $gutter-1 1fr $gutter-1;
     grid-template-rows:
@@ -494,18 +490,14 @@
 
     position: relative;
 
-    &--active {
+    &::before {
+      content: "";
+      position: absolute;
       width: 100%;
       height: 100%;
-      opacity: 1;
-      top: 0;
-      left: 0;
-      border-radius: 0;
-
       background: $blueGrey-9;
-      z-index: 999;
-      transition: all .4s ease-out;
-
+      z-index: 1;
+      opacity: 0;
     }
 
     &--ateliers {
@@ -531,7 +523,7 @@
         left: 8%;
         transform: translate(0, 0);
 
-        @include respond(until, 700px) {
+        @include respond(to, 700px) {
           width: auto;
 
           top: 2rem;
@@ -550,7 +542,7 @@
           }
         }
 
-        @include respond(until, 400px) {
+        @include respond(to, 400px) {
           left: 2rem;
         }
       }
@@ -559,11 +551,11 @@
         &--ateliers {
           right: 8%;
 
-          @include respond(until, 700px) {
+          @include respond(to, 700px) {
             right: 4rem;
           }
 
-          @include respond(until, 400px) {
+          @include respond(to, 400px) {
             right: 2rem;
           }
         }
@@ -571,11 +563,11 @@
         &--aouf {
           right: 8%;
 
-          @include respond(until, 700px) {
+          @include respond(to, 700px) {
             right: 4rem;
           }
 
-          @include respond(until, 400px) {
+          @include respond(to, 400px) {
             right: 2rem;
           }
         }
@@ -583,11 +575,11 @@
         &--wecashup {
           right: 8%;
 
-          @include respond(until, 700px) {
+          @include respond(to, 700px) {
             right: 4rem;
           }
 
-          @include respond(until, 400px) {
+          @include respond(to, 400px) {
             right: 2rem;
           }
         }
@@ -598,7 +590,7 @@
           top: 90%;
           left: 20%;
 
-          @include respond(until, 400px) {
+          @include respond(to, 400px) {
             top: 70%;
             left: 18%;
           }
@@ -608,11 +600,11 @@
           top: 90%;
           left: 30%;
 
-          @include respond(until, 700px) {
+          @include respond(to, 700px) {
             left: 20%;
           }
 
-          @include respond(until, 400px) {
+          @include respond(to, 400px) {
             top: 80%;
             left: 18%;
           }
@@ -622,17 +614,17 @@
           top: 33%;
           left: 38%;
 
-          @include respond(until, 700px) {
+          @include respond(to, 700px) {
             top: 70%;
             left: 30%;
           }
 
-          @include respond(until, 500px) {
+          @include respond(to, 500px) {
             top: 80%;
             left: 32%;
           }
 
-          @include respond(until, 400px) {
+          @include respond(to, 400px) {
             top: 70%;
             left: 18%;
           }
@@ -650,6 +642,38 @@
     @media only screen and (hover: none) {
       @include full-display;
     }
+
+    &--selected {
+      position: fixed;
+      cursor: auto;
+
+      &::before {
+        opacity: 1;
+        transition: all .1s ease-out;
+      }
+    }
+
+    &--active {
+      width: 100%;
+      height: 100%;
+      opacity: 1;
+      top: 0;
+      left: 0;
+      border-radius: 0;
+
+      background: $blueGrey-9;
+      z-index: 2;
+      transition: all .4s ease-out;
+
+      &:hover,
+      &:focus {
+        transform: translateY(0);
+      }
+
+      &::before {
+        opacity: 0;
+      }
+    }
   }
 
   &__logo {
@@ -663,7 +687,7 @@
     &>img {
       width: 100%;
 
-      @include respond(until, 700px) {
+      @include respond(to, 700px) {
         width: auto;
         height: 100%;
       }
@@ -672,12 +696,12 @@
     &--ateliers {
       width: 60%;
 
-      @include respond(until, 700px) {
+      @include respond(to, 700px) {
         width: auto;
         height: 56%;
       }
 
-      @include respond(until, 400px) {
+      @include respond(to, 400px) {
         height: 40%;
       }
     }
@@ -685,12 +709,12 @@
     &--aouf {
       width: 50%;
 
-      @include respond(until, 700px) {
+      @include respond(to, 700px) {
         width: auto;
         height: 80%;
       }
 
-      @include respond(until, 400px) {
+      @include respond(to, 400px) {
         height: 56%;
       }
     }
@@ -698,12 +722,12 @@
     &--wecashup {
       width: 60%;
 
-      @include respond(until, 700px) {
+      @include respond(to, 700px) {
         width: auto;
         height: 80%;
       }
 
-      @include respond(until, 400px) {
+      @include respond(to, 400px) {
         height: 56%;
       }
     }
@@ -721,11 +745,11 @@
       font-size: 3.6rem;
       @include nunito-lightItalic;
 
-      @include respond(until, 800px) {
+      @include respond(to, 900px) {
         font-size: 3.2rem;
       }
 
-      @include respond(until, 400px) {
+      @include respond(to, 400px) {
         font-size: 2.6rem;
       }
     }
@@ -733,7 +757,7 @@
     &--ateliers {
       top: 20%;
 
-      @include respond(until, 400px) {
+      @include respond(to, 400px) {
         top: 2rem;
       }
     }
@@ -741,7 +765,7 @@
     &--aouf {
       top: 20%;
 
-      @include respond(until, 400px) {
+      @include respond(to, 400px) {
         top: 2rem;
       }
     }
@@ -749,11 +773,11 @@
     &--wecashup {
       top: 14%;
 
-      @include respond(until, 700px) {
+      @include respond(to, 700px) {
         top: 20%;
       }
 
-      @include respond(until, 400px) {
+      @include respond(to, 400px) {
         top: 2rem;
       }
     }
@@ -787,7 +811,7 @@
     &--wecashup {
       width: 70%;
 
-      @include respond(until, 700px) {
+      @include respond(to, 700px) {
         width: 30%;
         transform: skew(45deg, -30deg);
       }
@@ -807,11 +831,11 @@
   box-shadow: inset $box-shadow-0;
   padding: 2rem $gutter-1;
 
-  @include respond(until, 600px) {
+  @include respond(to, 600px) {
     justify-items: space-between;
   }
 
-  @include respond(until, 500px) {
+  @include respond(to, 500px) {
     flex-direction: column;
     align-items: center;
     align-content: center;
@@ -832,7 +856,7 @@
     box-shadow: $box-shadow-0;
     transition: all 0.2s ease-out;
 
-    @include respond(until, 500px) {
+    @include respond(to, 500px) {
       margin-bottom: 1.6rem;
     }
 
@@ -855,11 +879,11 @@
       @extend .contact__link;
       margin-right: 2rem;
 
-      @include respond(until, 600px) {
+      @include respond(to, 600px) {
         margin-right: auto;
       }
 
-      @include respond(until, 500px) {
+      @include respond(to, 500px) {
         margin-right: 0;
       }
     }
@@ -870,7 +894,7 @@
       @extend .contact__link;
       margin-right: auto;
 
-      @include respond(until, 500px) {
+      @include respond(to, 500px) {
         margin-right: 0;
       }
     }

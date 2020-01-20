@@ -2,7 +2,7 @@
 /// @param {Number} $number - Number to remove unit from
 /// @return {Number} - Unitless number
 @function strip-unit($number) {
-  @if type-of($number) == "number" and not unitless($number) {
+  @if type-of($number)=="number"and not unitless($number) {
     @return $number / ($number * 0 + 1);
   }
 
@@ -13,9 +13,11 @@
 @mixin respond($direction, $breakpoint-px) {
   $feature: null;
 
-  @if $direction==until {
+  @if $direction==to {
     $feature: max-width;
-  } @else if $direction==from {
+  }
+
+  @else if $direction==from {
     $feature: min-width;
   }
 
@@ -69,24 +71,33 @@
 
 // Moving background on projects hover
 @mixin projects-moving-background($color-1, $color-0) {
-  background-image: linear-gradient(
-    120deg,
-    $blue-2 0,
-    $blue-4 50%,
-    $color-0 50%,
-    $color-1 100%
-  );
-  background-size: 280%;
-
-  @include respond(until, 1200px) {
-    background-size: 280%;
-  }
+  background-image: linear-gradient(120deg,
+      $blue-2 0,
+      $blue-4 50%,
+      $color-0 50%,
+      $color-1 100%);
+  background-size: 300%;
 
   &:hover,
   &:focus {
     background-position: 100%;
   }
+
   @media only screen and (hover: none) {
     background-position: 100%;
+  }
+}
+
+@mixin projects-moving-background-reset {
+  background-image: none;
+  background-size: auto;
+
+  &:hover,
+  &:focus {
+    background-position: unset;
+  }
+
+  @media only screen and (hover: none) {
+    background-position: unset;
   }
 }
