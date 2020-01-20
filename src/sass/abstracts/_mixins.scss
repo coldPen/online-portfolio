@@ -101,3 +101,120 @@
     background-position: unset;
   }
 }
+
+@mixin projects-reveal {
+  &>.projects__logo {
+    width: 40%;
+
+    top: 10%;
+    left: 8%;
+    transform: translate(0, 0);
+
+    @include respond(to, 700px) {
+      width: auto;
+
+      top: 2rem;
+      left: 4rem;
+
+      &--ateliers {
+        height: 20%;
+      }
+
+      &--aouf {
+        height: 40%;
+      }
+
+      &--wecashup {
+        height: 30%;
+      }
+    }
+
+    @include respond(to, 400px) {
+      left: 2rem;
+    }
+  }
+
+  &>.projects__keyword {
+    &--ateliers {
+      right: 8%;
+
+      @include respond(to, 700px) {
+        right: 4rem;
+      }
+
+      @include respond(to, 400px) {
+        right: 2rem;
+      }
+    }
+
+    &--aouf {
+      right: 8%;
+
+      @include respond(to, 700px) {
+        right: 4rem;
+      }
+
+      @include respond(to, 400px) {
+        right: 2rem;
+      }
+    }
+
+    &--wecashup {
+      right: 8%;
+
+      @include respond(to, 700px) {
+        right: 4rem;
+      }
+
+      @include respond(to, 400px) {
+        right: 2rem;
+      }
+    }
+  }
+
+  &>.projects__preview {
+    &--ateliers {
+      top: 90%;
+      left: 20%;
+
+      @include respond(to, 400px) {
+        top: 70%;
+        left: 18%;
+      }
+    }
+
+    &--aouf {
+      top: 90%;
+      left: 30%;
+
+      @include respond(to, 700px) {
+        left: 20%;
+      }
+
+      @include respond(to, 400px) {
+        top: 80%;
+        left: 18%;
+      }
+    }
+
+    &--wecashup {
+      top: 33%;
+      left: 38%;
+
+      @include respond(to, 700px) {
+        top: 70%;
+        left: 30%;
+      }
+
+      @include respond(to, 500px) {
+        top: 80%;
+        left: 32%;
+      }
+
+      @include respond(to, 400px) {
+        top: 70%;
+        left: 18%;
+      }
+    }
+  }
+}
