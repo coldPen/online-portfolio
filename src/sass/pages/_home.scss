@@ -511,21 +511,176 @@
       @media only screen and (hover: none) {
         @include projects-reveal;
       }
-    }
 
-    &--grid#{&}--ateliers {
-      grid-area: ateliers;
-      @include projects-moving-background($ateliers-1, $ateliers-0);
-    }
+      &.projects__item--ateliers {
+        grid-area: ateliers;
+        @include projects-moving-background($ateliers-1, $ateliers-0);
+      }
 
-    &--grid#{&}--aouf {
-      grid-area: aouf;
-      @include projects-moving-background($aouf-1, $aouf-0);
-    }
+      &.projects__item--aouf {
+        grid-area: aouf;
+        @include projects-moving-background($aouf-1, $aouf-0);
+      }
 
-    &--grid#{&}--wecashup {
-      grid-area: wecashup;
-      @include projects-moving-background($wecashup-1, $wecashup-0);
+      &.projects__item--wecashup {
+        grid-area: wecashup;
+        @include projects-moving-background($wecashup-1, $wecashup-0);
+      }
+
+      &>.projects__logo {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        transition: all 0.2s ease-out;
+
+        &>img {
+          width: 100%;
+
+          @include respond(to, 700px) {
+            width: auto;
+            height: 100%;
+          }
+        }
+
+
+        &--ateliers {
+          width: 60%;
+
+          @include respond(to, 700px) {
+            width: auto;
+            height: 56%;
+          }
+
+          @include respond(to, 400px) {
+            height: 40%;
+          }
+        }
+
+        &--aouf {
+          width: 50%;
+
+          @include respond(to, 700px) {
+            width: auto;
+            height: 80%;
+          }
+
+          @include respond(to, 400px) {
+            height: 56%;
+          }
+        }
+
+        &--wecashup {
+          width: 60%;
+
+          @include respond(to, 700px) {
+            width: auto;
+            height: 80%;
+          }
+
+          @include respond(to, 400px) {
+            height: 56%;
+          }
+        }
+      }
+
+      &>.projects__keyword {
+
+        position: absolute;
+        right: -100%;
+
+        transition: all 0.2s ease-out;
+
+        &>p {
+          line-height: 1;
+          color: $white;
+          font-size: 3.6rem;
+          @include nunito-lightItalic;
+
+          @include respond(to, 900px) {
+            font-size: 3.2rem;
+          }
+
+          @include respond(to, 500px) {
+            font-size: 2.6rem;
+          }
+
+          @include respond(to, 400px) {
+            font-size: 2.2rem;
+          }
+        }
+
+
+        &--ateliers {
+          top: 20%;
+
+          @include respond(to, 400px) {
+            top: 2rem;
+          }
+        }
+
+        &--aouf {
+          top: 20%;
+
+          @include respond(to, 400px) {
+            top: 2rem;
+          }
+        }
+
+        &--wecashup {
+          top: 14%;
+
+          @include respond(to, 700px) {
+            top: 20%;
+          }
+
+          @include respond(to, 400px) {
+            top: 2rem;
+          }
+        }
+      }
+
+      &>.projects__preview {
+
+        position: absolute;
+        top: 120%;
+        left: 120%;
+
+        transform-origin: top left;
+
+        box-shadow: $box-shadow-2;
+
+        transition: all 0.2s ease-out;
+
+        &>img {
+          width: 100%;
+        }
+
+
+        &--ateliers {
+          width: 35%;
+          transform: skew(45deg, -30deg);
+        }
+
+        &--aouf {
+          width: 35%;
+          transform: skew(45deg, -30deg);
+        }
+
+        &--wecashup {
+          width: 70%;
+
+          @include respond(to, 700px) {
+            width: 30%;
+            transform: skew(45deg, -30deg);
+          }
+        }
+      }
+
+      &>.projects__description {
+        display: none;
+      }
     }
 
     &--selected {
@@ -565,160 +720,7 @@
       }
     }
 
-    .projects__logo {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
 
-      transition: all 0.2s ease-out;
-
-      &>img {
-        width: 100%;
-
-        @include respond(to, 700px) {
-          width: auto;
-          height: 100%;
-        }
-      }
-
-
-      &--ateliers {
-        width: 60%;
-
-        @include respond(to, 700px) {
-          width: auto;
-          height: 56%;
-        }
-
-        @include respond(to, 400px) {
-          height: 40%;
-        }
-      }
-
-      &--aouf {
-        width: 50%;
-
-        @include respond(to, 700px) {
-          width: auto;
-          height: 80%;
-        }
-
-        @include respond(to, 400px) {
-          height: 56%;
-        }
-      }
-
-      &--wecashup {
-        width: 60%;
-
-        @include respond(to, 700px) {
-          width: auto;
-          height: 80%;
-        }
-
-        @include respond(to, 400px) {
-          height: 56%;
-        }
-      }
-    }
-
-    .projects__keyword {
-
-      position: absolute;
-      right: -100%;
-
-      transition: all 0.2s ease-out;
-
-      &>p {
-        line-height: 1;
-        color: $white;
-        font-size: 3.6rem;
-        @include nunito-lightItalic;
-
-        @include respond(to, 900px) {
-          font-size: 3.2rem;
-        }
-
-        @include respond(to, 500px) {
-          font-size: 2.6rem;
-        }
-
-        @include respond(to, 400px) {
-          font-size: 2.2rem;
-        }
-      }
-
-
-      &--ateliers {
-        top: 20%;
-
-        @include respond(to, 400px) {
-          top: 2rem;
-        }
-      }
-
-      &--aouf {
-        top: 20%;
-
-        @include respond(to, 400px) {
-          top: 2rem;
-        }
-      }
-
-      &--wecashup {
-        top: 14%;
-
-        @include respond(to, 700px) {
-          top: 20%;
-        }
-
-        @include respond(to, 400px) {
-          top: 2rem;
-        }
-      }
-    }
-
-    .projects__preview {
-
-      position: absolute;
-      top: 120%;
-      left: 120%;
-
-      transform-origin: top left;
-
-      box-shadow: $box-shadow-2;
-
-      transition: all 0.2s ease-out;
-
-      &>img {
-        width: 100%;
-      }
-
-
-      &--ateliers {
-        width: 35%;
-        transform: skew(45deg, -30deg);
-      }
-
-      &--aouf {
-        width: 35%;
-        transform: skew(45deg, -30deg);
-      }
-
-      &--wecashup {
-        width: 70%;
-
-        @include respond(to, 700px) {
-          width: 30%;
-          transform: skew(45deg, -30deg);
-        }
-      }
-    }
-
-    .projects__description {
-      display: none;
-    }
   }
 
 }
