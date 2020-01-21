@@ -10,12 +10,6 @@ import "./sass/main.scss";
       cssRule => cssRule.selectorText === selector
     ) + 1;
 
-  const insertionIndex_selectedItem = getInsertionIndex(
-    `.projects__item--selected`
-  );
-
-  const insertionIndex_noScroll = getInsertionIndex(`.noScroll`);
-
   const projects = [`ateliers`, `aouf`, `wecashup`];
 
   projects.forEach(project => {
@@ -43,7 +37,7 @@ import "./sass/main.scss";
             ${itemPosRules}
           }
         `,
-        insertionIndex_selectedItem
+        getInsertionIndex(`.projects__item--selected`)
       );
       tile.classList.add(`projects__item--selected`);
 
@@ -53,7 +47,7 @@ import "./sass/main.scss";
             top: -${window.scrollY / 10}rem;
           }
         `,
-        insertionIndex_noScroll
+        getInsertionIndex(`.noScroll`)
       );
       document.body.classList.add("noScroll");
 
@@ -73,3 +67,10 @@ import "./sass/main.scss";
     tile.addEventListener(`click`, () => openTile());
   });
 })();
+
+/* For development purposes only */
+// (() => {
+//   const tile = document.getElementById("ateliers");
+//   tile.scrollIntoView();
+//   tile.click();
+// })();

@@ -657,7 +657,6 @@
           width: 100%;
         }
 
-
         &--ateliers {
           width: 35%;
           transform: skew(45deg, -30deg);
@@ -714,10 +713,13 @@
     &--full-screen {
       display: grid;
       grid-template-columns: 1fr 1fr;
+      grid-template-rows: 8rem min-content min-content;
       grid-template-areas:
         "logo        preview"
         "keyword     preview"
         "description preview";
+      padding: 4rem;
+      column-gap: 2rem;
 
       &::before {
         opacity: 0;
@@ -727,22 +729,52 @@
       &>.projects__logo {
         grid-area: logo;
 
-        width: 100%;
+        &>img {
+          width: 100%;
+          height: 100%;
+        }
+
+        &--ateliers {}
+
+        &--aouf {}
+
+        &--wecashup {}
       }
 
       &>.projects__keyword {
         grid-area: keyword;
+
+        &--ateliers {}
+
+        &--aouf {}
+
+        &--wecashup {}
+      }
+
+      &>.projects__description {
+        grid-area: description;
+
+        &--ateliers {}
+
+        &--aouf {}
+
+        &--wecashup {}
       }
 
       &>.projects__preview {
         grid-area: preview;
 
-        width: 100%;
+        &>img {
+          width: 100%;
+        }
+
+        &--ateliers {}
+
+        &--aouf {}
+
+        &--wecashup {}
       }
 
-      &>.projects__description {
-        grid-area: description;
-      }
     }
 
   }
