@@ -39,9 +39,9 @@ import "./sass/main.scss";
 
       styleSheet.insertRule(
         `
-        .projects__item--selected {
-          ${itemPosRules}
-        }
+          .projects__item--selected {
+            ${itemPosRules}
+          }
         `,
         insertionIndex_selectedItem
       );
@@ -49,9 +49,9 @@ import "./sass/main.scss";
 
       styleSheet.insertRule(
         `
-        .noScroll {
-          top: -${window.scrollY / 10}rem;
-        }
+          .noScroll {
+            top: -${window.scrollY / 10}rem;
+          }
         `,
         insertionIndex_noScroll
       );

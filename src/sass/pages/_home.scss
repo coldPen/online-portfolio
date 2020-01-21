@@ -713,13 +713,37 @@
 
     &--full-screen {
       display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas:
+        "logo        preview"
+        "keyword     preview"
+        "description preview";
 
       &::before {
         opacity: 0;
         transition: all .4s ease-out;
       }
-    }
 
+      &>.projects__logo {
+        grid-area: logo;
+
+        width: 100%;
+      }
+
+      &>.projects__keyword {
+        grid-area: keyword;
+      }
+
+      &>.projects__preview {
+        grid-area: preview;
+
+        width: 100%;
+      }
+
+      &>.projects__description {
+        grid-area: description;
+      }
+    }
 
   }
 
