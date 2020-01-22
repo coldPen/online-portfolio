@@ -499,6 +499,8 @@
         background: $blueGrey-9;
         z-index: 1;
         opacity: 0;
+
+        transition: all .1s ease-out;
       }
 
       &:hover,
@@ -688,7 +690,6 @@
 
       &::before {
         opacity: 1;
-        transition: all .1s ease-out;
       }
     }
 
@@ -702,7 +703,7 @@
 
       background: $blueGrey-9;
       z-index: 2;
-      transition: all .4s ease-out;
+      // transition: all .4s ease-out;
 
       &:hover,
       &:focus {
@@ -713,17 +714,16 @@
     &--full-screen {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      grid-template-rows: 8rem min-content min-content;
+      grid-template-rows: 8rem min-content min-content 1fr;
       grid-template-areas:
         "logo        preview"
-        "keyword     preview"
-        "description preview";
+        "description preview"
+        ".           preview";
       padding: 4rem;
-      column-gap: 2rem;
+      gap: 2rem;
 
       &::before {
         opacity: 0;
-        transition: all .4s ease-out;
       }
 
       &>.projects__logo {
@@ -742,13 +742,7 @@
       }
 
       &>.projects__keyword {
-        grid-area: keyword;
-
-        &--ateliers {}
-
-        &--aouf {}
-
-        &--wecashup {}
+        display: none;
       }
 
       &>.projects__description {
@@ -764,8 +758,14 @@
       &>.projects__preview {
         grid-area: preview;
 
+        position: relative;
+        width: 100%;
+        height: 100%;
+
+        background: orangered;
+
         &>img {
-          width: 100%;
+          position: absolute;
         }
 
         &--ateliers {}

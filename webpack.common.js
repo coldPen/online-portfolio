@@ -1,5 +1,10 @@
 module.exports = {
-  entry: { main: "./src/index.js" },
+  entry: { main: "./src/index" },
+
+  resolve: {
+    extensions: [".ts", ".tsx", ".js", ".json"]
+  },
+
   module: {
     rules: [
       {
@@ -26,7 +31,7 @@ module.exports = {
         }
       },
       {
-        test: /\.m?js$/,
+        test: /\.(ts|js)$/,
         exclude: /node_modules/,
         use: {
           loader: "babel-loader",
