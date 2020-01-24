@@ -10,7 +10,7 @@ import darkWecashup from "./assets/dark-wecashup.svg";
 (() => {
   const styleSheet = document.styleSheets[0];
 
-  const getInsertionIndex = selector =>
+  const getStylesheetIndex = selector =>
     Array.from(styleSheet.cssRules).findIndex(
       cssRule => cssRule.selectorText === selector
     ) + 1;
@@ -48,28 +48,28 @@ import darkWecashup from "./assets/dark-wecashup.svg";
             ${itemPosRules}
           }
         `,
-        getInsertionIndex(`.projects__item--selected`)
+        getStylesheetIndex(`.projects__item--selected`)
       );
       tile.classList.add(`projects__item--selected`);
 
       styleSheet.insertRule(
         `
-          .noScroll {
+          .no-scroll {
             top: -${window.scrollY / 10}rem;
           }
         `,
-        getInsertionIndex(`.noScroll`)
+        getStylesheetIndex(`.no-scroll`)
       );
-      document.body.classList.add("noScroll");
+      document.body.classList.add(`no-scroll`);
 
       setTimeout(() => {
         tile.classList.add(`projects__item--active`);
         setTimeout(() => {
+          logo.src = darkLogos[project];
           tile.classList.remove(`projects__item--grid`);
           tile.classList.add(`projects__item--full-screen`);
-          logo.src = darkLogos[project];
-        }, 400);
-      }, 100);
+        }, 200);
+      }, 4);
     };
 
     tile.addEventListener(`keypress`, e => {
