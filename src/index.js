@@ -83,7 +83,7 @@ import darkWecashup from "./assets/dark-wecashup.svg";
 /* For development purposes only */
 // (() => {
 //   const projects = [`ateliers`, `aouf`, `wecashup`];
-//   const tile = document.getElementById(projects[1]);
+//   const tile = document.getElementById(projects[2]);
 //   tile.scrollIntoView();
 //   tile.click();
 // })();

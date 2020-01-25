@@ -38,7 +38,6 @@
   }
 
   &--bold {
-    @extend .heading-secondary;
     @include nunito-bold;
   }
 }
@@ -49,7 +48,15 @@
   @include nunito-regular;
 
   &--bold {
-    @extend .heading-tertiary;
+    @include nunito-bold;
+  }
+}
+
+.heading-quaternary {
+  font-size: 2rem;
+  @include nunito-regular;
+
+  &--bold {
     @include nunito-bold;
   }
 }

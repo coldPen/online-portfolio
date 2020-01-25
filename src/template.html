@@ -20,7 +20,7 @@
             Sass, JS, React & Gatsby
           </span>
         </h1>
-        <h2 class="hero__subheading heading-secondary">
+        <h2 class="hero__subheading heading-secondary heading-secondary--bold">
           Sites & Applications Web
         </h2>
       </div>
@@ -61,7 +61,7 @@
             <img src="./assets/gatsby.svg" alt="Gatsby" />
           </div>
           <div class="gatsby__text">
-            <h3 class="gatsby__heading heading-tertiary--bold">
+            <h3 class="gatsby__heading heading-tertiary heading-tertiary--bold">
               Sites ultra-réactifs
             </h3>
             <p class="paragraph">
@@ -81,7 +81,7 @@
         </div>
         <div class="react">
           <div class="react__text">
-            <h3 class="react__heading heading-tertiary--bold">
+            <h3 class="react__heading heading-tertiary heading-tertiary--bold">
               Applications React
             </h3>
             <p class="paragraph">
@@ -102,7 +102,7 @@
             <img src="./assets/responsive.svg" alt="Responsive" />
           </div>
           <div class="sass__text">
-            <h3 class="sass__heading heading-tertiary--bold">
+            <h3 class="sass__heading heading-tertiary heading-tertiary--bold">
               Responsive design
             </h3>
             <p class="paragraph">
@@ -123,7 +123,7 @@
           </svg>
         </div>
 
-        <h2 class="skills__heading heading-secondary--bold">
+        <h2 class="skills__heading heading-secondary heading-secondary--bold">
           Compétences
         </h2>
 
@@ -253,7 +253,7 @@
       </section>
 
       <section class="projects">
-        <h2 class="projects__heading heading-secondary--bold">
+        <h2 class="projects__heading heading-secondary heading-secondary--bold">
           Derniers projets
         </h2>
         <div
@@ -263,7 +263,14 @@
         >
           <h3 class="projects__logo projects__logo--ateliers">
             <img
+              class="projects__logo--light"
               src="./assets/ateliers.svg"
+              alt="Ateliers Chartreux"
+              id="logo-ateliers"
+            />
+            <img
+              class="projects__logo--dark"
+              src="./assets/dark-ateliers.svg"
               alt="Ateliers Chartreux"
               id="logo-ateliers"
             />
@@ -278,12 +285,22 @@
             />
           </div>
           <div class="projects__description projects__description--ateliers">
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere
-              ipsa magni veritatis aut culpa amet, nisi recusandae eius deserunt
-              accusamus, est sed doloremque aperiam, nobis mollitia maiores.
-              Libero, quasi sit?
+            <h4
+              class="projects__subheading heading-quaternary heading-quaternary--bold"
+            >
+              Le projet
+            </h4>
+            <p class="paragraph">
+              Développement d'un site vitrine pour l'association marseillaise
+              Ateliers Chartreux, lieu de formation et fabrication numérique,
+              pour promouvoir ses services auprès de bénéficiaires potentiels.
             </p>
+            <h4
+              class="projects__subheading heading-quaternary heading-quaternary--bold"
+            >
+              Les outils
+            </h4>
+            <p class="paragraph">Gatsby, Sass, Contentful et Netlify</p>
           </div>
         </div>
         <div
@@ -292,7 +309,12 @@
           tabindex="0"
         >
           <h3 class="projects__logo projects__logo--aouf">
-            <img src="./assets/aouf.svg" alt="Aouf" id="logo-aouf"/>
+            <img class="projects__logo--light" src="./assets/aouf.svg" alt="Aouf" />
+            <img
+            class="projects__logo--dark"
+            src="./assets/dark-aouf.svg"
+            alt="Ateliers Chartreux"
+          />
           </h3>
           <div class="projects__keyword projects__keyword--aouf">
             <p>Efficacité</p>
@@ -301,12 +323,12 @@
             <img src="./assets/aouf-landing.png" alt="Landing page Aouf" />
           </div>
           <div class="projects__description projects__description--aouf">
-            <p>
+            <p class="paragraph">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere
               ipsa magni veritatis aut culpa amet, nisi recusandae eius deserunt
               accusamus, est sed doloremque aperiam, nobis mollitia maiores.
               Libero, quasi sit?
-            </p>
+            </p class="paragraph">
           </div>
         </div>
         <div
@@ -315,16 +337,22 @@
           tabindex="0"
         >
           <h3 class="projects__logo projects__logo--wecashup">
-            <img src="./assets/wecashup.svg" alt="WeCashUp" id="logo-wecashup" />
+            <img
+              src="./assets/wecashup.svg"
+              alt="WeCashUp"
+              id="logo-wecashup"
+            />
           </h3>
           <div class="projects__keyword projects__keyword--wecashup">
             <p>Sécurité</p>
           </div>
           <div class="projects__preview projects__preview--wecashup">
-            <img src="./assets/wecashup-form.png" alt="Formulaire WeCashUp" />
+            <img class="projects__image" src="./assets/wecashup-form-1.png" alt="Formulaire WeCashUp 1" />
+            <img class="projects__image" src="./assets/wecashup-form-2.png" alt="Formulaire WeCashUp 2" />
+            <img class="projects__image" src="./assets/wecashup-form-3.png" alt="Formulaire WeCashUp 3" />
           </div>
           <div class="projects__description projects__description--wecashup">
-            <p>
+            <p class="paragraph">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere
               ipsa magni veritatis aut culpa amet, nisi recusandae eius deserunt
               accusamus, est sed doloremque aperiam, nobis mollitia maiores.
