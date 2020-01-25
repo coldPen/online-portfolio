@@ -16,11 +16,6 @@ import darkWecashup from "./assets/dark-wecashup.svg";
     ) + 1;
 
   const projects = [`ateliers`, `aouf`, `wecashup`];
-  const darkLogos = {
-    aouf: darkAouf,
-    ateliers: darkAteliers,
-    wecashup: darkWecashup
-  };
 
   projects.forEach(project => {
     const tile = document.getElementById(project);
@@ -65,7 +60,6 @@ import darkWecashup from "./assets/dark-wecashup.svg";
       setTimeout(() => {
         tile.classList.add(`projects__item--active`);
         setTimeout(() => {
-          logo.src = darkLogos[project];
           tile.classList.remove(`projects__item--grid`);
           tile.classList.add(`projects__item--full-screen`);
         }, 200);
@@ -83,7 +77,7 @@ import darkWecashup from "./assets/dark-wecashup.svg";
 /* For development purposes only */
 // (() => {
 //   const projects = [`ateliers`, `aouf`, `wecashup`];
-//   const tile = document.getElementById(projects[2]);
+//   const tile = document.getElementById(projects[1]);
 //   tile.scrollIntoView();
 //   tile.click();
 // })();

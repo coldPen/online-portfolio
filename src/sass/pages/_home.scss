@@ -545,6 +545,11 @@
             width: auto;
             height: 100%;
           }
+
+          &:not(:first-child) {
+            display: none;
+          }
+
         }
 
 
@@ -750,6 +755,10 @@
         &>img {
           width: 100%;
           height: 100%;
+
+          &:first-child {
+            display: none;
+          }
         }
 
         &--ateliers {}
