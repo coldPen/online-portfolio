@@ -1,11 +1,6 @@
 /* Import SASS stylesheets */
 import "./sass/main.scss";
 
-/* Import dark versions of logos */
-import darkAouf from "./assets/dark-aouf.svg";
-import darkAteliers from "./assets/dark-ateliers.svg";
-import darkWecashup from "./assets/dark-wecashup.svg";
-
 /* Project tiles animations */
 (() => {
   const styleSheet = document.styleSheets[0];
@@ -19,7 +14,6 @@ import darkWecashup from "./assets/dark-wecashup.svg";
 
   projects.forEach(project => {
     const tile = document.getElementById(project);
-    const logo = document.getElementById(`logo-${project}`);
 
     tile.addEventListener(`mousedown`, e => e.preventDefault());
 
@@ -77,7 +71,7 @@ import darkWecashup from "./assets/dark-wecashup.svg";
 /* For development purposes only */
 // (() => {
 //   const projects = [`ateliers`, `aouf`, `wecashup`];
-//   const tile = document.getElementById(projects[1]);
+//   const tile = document.getElementById(projects[0]);
 //   tile.scrollIntoView();
 //   tile.click();
 // })();

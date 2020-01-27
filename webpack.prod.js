@@ -29,10 +29,11 @@ module.exports = merge(common, {
   },
   plugins: [
     new MiniCssExtractPlugin({ filename: "[name].[contentHash].css" }),
-    new CleanWebpackPlugin({
-      cleanOnceBeforeBuildPatterns: ["!CNAME"],
-      cleanAfterEveryBuildPatterns: ["!CNAME"]
-    })
+    new CleanWebpackPlugin()
+    // new CleanWebpackPlugin({
+    //   cleanOnceBeforeBuildPatterns: ["!CNAME"],
+    //   cleanAfterEveryBuildPatterns: ["!CNAME"]
+    // })
   ],
   module: {
     rules: [

@@ -9,9 +9,11 @@
   row-gap: 12rem;
 
   padding: 12rem 0 0;
-  background: linear-gradient(to right,
+  background: linear-gradient(
+      to right,
       rgba($blue-0, 0.975),
-      rgba($blue-4, 0.975)),
+      rgba($blue-4, 0.975)
+    ),
     $circuit-board;
   background-attachment: fixed, fixed;
 
@@ -40,9 +42,11 @@
       "intro intro        intro";
     row-gap: 0;
     padding: 4rem 0 0;
-    background: linear-gradient(to top,
+    background: linear-gradient(
+        to top,
         rgba($blue-0, 0.975),
-        rgba($blue-4, 0.975)),
+        rgba($blue-4, 0.975)
+      ),
       $circuit-board;
   }
 
@@ -82,7 +86,7 @@
 
     font-size: 0;
 
-    &>img {
+    & > img {
       height: 100%;
       width: 100%;
 
@@ -115,7 +119,7 @@
     grid-template-rows: 1fr min-content 1fr;
     height: 100%;
 
-    &>svg {
+    & > svg {
       grid-row: 2 / 3;
       transform: scale(1.01);
     }
@@ -180,7 +184,7 @@
 
     font-size: 0;
 
-    &>img {
+    & > img {
       border-radius: 50%;
       width: 12rem;
       height: 12rem;
@@ -235,7 +239,7 @@
     font-size: 0;
     text-align: center;
 
-    &>img {
+    & > img {
       width: 100%;
 
       @include respond(to, 700px) {
@@ -308,14 +312,18 @@
 .skills {
   position: relative;
 
-  background: linear-gradient(to right,
+  background: linear-gradient(
+      to right,
       rgba($blue-0, 0.975),
-      rgba($blue-4, 0.975)),
+      rgba($blue-4, 0.975)
+    ),
     $signal;
   background-attachment: fixed, fixed;
 
   display: grid;
-  grid-template-columns: calc(#{$gutter-1} + 10rem) 1fr calc(#{$gutter-1} + 10rem);
+  grid-template-columns: calc(#{$gutter-1} + 10rem) 1fr calc(
+      #{$gutter-1} + 10rem
+    );
   grid-template-areas:
     "top-waves    top-waves    top-waves   "
     ".            heading      .           "
@@ -324,7 +332,9 @@
   row-gap: 2rem;
 
   @include respond(to, 900px) {
-    grid-template-columns: calc(#{$gutter-1} + 5rem) 1fr calc(#{$gutter-1} + 5rem);
+    grid-template-columns: calc(#{$gutter-1} + 5rem) 1fr calc(
+        #{$gutter-1} + 5rem
+      );
   }
 
   @include respond(to, 700px) {
@@ -344,7 +354,7 @@
 
       margin-bottom: 6rem;
 
-      &>svg {
+      & > svg {
         transform: scale(1.01) rotate(180deg);
       }
     }
@@ -354,7 +364,7 @@
 
       margin-top: 6rem;
 
-      &>svg {
+      & > svg {
         transform: scale(1.01);
       }
     }
@@ -444,9 +454,10 @@
   position: relative;
 
   display: grid;
-  grid-template-columns: calc(#{$gutter-1} + 10rem) 1fr 2.8rem 1fr calc(#{$gutter-1} + 10rem);
-  grid-template-rows:
-    min-content 20rem 20rem;
+  grid-template-columns: calc(#{$gutter-1} + 10rem) 1fr 2.8rem 1fr calc(
+      #{$gutter-1} + 10rem
+    );
+  grid-template-rows: min-content 20rem 20rem;
   grid-template-areas:
     ". heading  heading heading  ."
     ". ateliers .       wecashup ."
@@ -456,15 +467,12 @@
   background: $blueGrey-9;
 
   @include respond(to, 1200px) {
-    grid-template-columns:
-      $gutter-1 1fr 2.8rem 1fr $gutter-1;
+    grid-template-columns: $gutter-1 1fr 2.8rem 1fr $gutter-1;
   }
 
   @include respond(to, 700px) {
-    grid-template-columns:
-      $gutter-1 1fr $gutter-1;
-    grid-template-rows:
-      min-content 20rem 20rem 20rem;
+    grid-template-columns: $gutter-1 1fr $gutter-1;
+    grid-template-rows: min-content 20rem 20rem 20rem;
     grid-template-areas:
       ". heading  ."
       ". ateliers ."
@@ -501,33 +509,7 @@
         z-index: 1;
         opacity: 0;
         // A short enough transition blocks view of children moving with the container
-        transition: opacity .1s ease-out;
-      }
-
-      &:hover,
-      &:focus {
-        transform: translateY(-0.2rem);
-        box-shadow: $box-shadow-2;
-        @include projects-reveal;
-      }
-
-      @media only screen and (hover: none) {
-        @include projects-reveal;
-      }
-
-      &.projects__item--ateliers {
-        grid-area: ateliers;
-        @include projects-moving-background($ateliers-1, $ateliers-0);
-      }
-
-      &.projects__item--aouf {
-        grid-area: aouf;
-        @include projects-moving-background($aouf-1, $aouf-0);
-      }
-
-      &.projects__item--wecashup {
-        grid-area: wecashup;
-        @include projects-moving-background($wecashup-1, $wecashup-0);
+        transition: opacity 0.1s ease-out;
       }
 
       .projects__logo {
@@ -538,69 +520,60 @@
 
         transition: all 0.2s ease-out;
 
-        &>img {
+        & > img {
           width: 100%;
-
-          @include respond(to, 700px) {
-            width: auto;
-            height: 100%;
-          }
 
           &:not(:first-child) {
             display: none;
           }
-
         }
-
 
         &--ateliers {
           width: 60%;
 
-          @include respond(to, 700px) {
-            width: auto;
-            height: 56%;
-          }
+          // @include respond(to, 700px) {
+          //   width: auto;
+          //   height: 56%;
+          // }
 
-          @include respond(to, 400px) {
-            height: 40%;
-          }
+          // @include respond(to, 400px) {
+          //   height: 40%;
+          // }
         }
 
         &--aouf {
           width: 50%;
 
           @include respond(to, 700px) {
-            width: auto;
-            height: 80%;
+            width: 40%;
           }
 
-          @include respond(to, 400px) {
-            height: 56%;
-          }
+          // @include respond(to, 400px) {
+          //   height: 56%;
+          // }
         }
 
         &--wecashup {
           width: 60%;
 
-          @include respond(to, 700px) {
-            width: auto;
-            height: 80%;
-          }
+          // @include respond(to, 700px) {
+          //   width: auto;
+          //   height: 80%;
+          // }
 
-          @include respond(to, 400px) {
-            height: 56%;
-          }
+          // @include respond(to, 400px) {
+          //   height: 56%;
+          // }
         }
       }
 
       .projects__keyword {
-
         position: absolute;
         right: -100%;
 
         transition: all 0.2s ease-out;
 
-        &>p {
+        & > p {
           line-height: 1;
           color: $white;
           font-size: 3.6rem;
@@ -618,7 +591,6 @@
             font-size: 2.2rem;
           }
         }
-
 
         &--ateliers {
           top: 20%;
@@ -650,7 +622,6 @@
       }
 
       .projects__preview {
-
         position: absolute;
         top: 120%;
         left: 120%;
@@ -661,7 +632,7 @@
 
         transition: all 0.2s ease-out;
 
-        &>img {
+        & > img {
           width: 100%;
 
           &:not(:first-child) {
@@ -691,6 +662,161 @@
 
       .projects__description {
         display: none;
+      }
+
+      /* Not a generic mixin */
+      @mixin projects-reveal {
+        & > .projects__logo {
+          width: 40%;
+
+          top: 10%;
+          left: 8%;
+          transform: translate(0, 0);
+
+          @include respond(to, 700px) {
+            width: 30%;
+            &--ateliers {
+            }
+
+            &--aouf {
+            }
+
+            &--wecashup {
+            }
+          }
+        }
+
+        & > .projects__keyword {
+          &--ateliers {
+            right: 8%;
+
+            @include respond(to, 700px) {
+              right: 4rem;
+            }
+
+            @include respond(to, 400px) {
+              right: 2rem;
+            }
+          }
+
+          &--aouf {
+            right: 8%;
+
+            @include respond(to, 700px) {
+              right: 4rem;
+            }
+
+            @include respond(to, 400px) {
+              right: 2rem;
+            }
+          }
+
+          &--wecashup {
+            right: 8%;
+
+            @include respond(to, 700px) {
+              right: 4rem;
+            }
+
+            @include respond(to, 400px) {
+              right: 2rem;
+            }
+          }
+        }
+
+        & > .projects__preview {
+          &--ateliers {
+            top: 90%;
+            left: 20%;
+
+            @include respond(to, 400px) {
+              top: 70%;
+              left: 18%;
+            }
+          }
+
+          &--aouf {
+            top: 90%;
+            left: 30%;
+
+            @include respond(to, 700px) {
+              left: 20%;
+            }
+
+            @include respond(to, 400px) {
+              top: 80%;
+              left: 18%;
+            }
+          }
+
+          &--wecashup {
+            top: 33%;
+            left: 38%;
+
+            @include respond(to, 700px) {
+              top: 70%;
+              left: 30%;
+            }
+
+            @include respond(to, 500px) {
+              top: 80%;
+              left: 32%;
+            }
+
+            @include respond(to, 400px) {
+              top: 70%;
+              left: 18%;
+            }
+          }
+        }
+      }
+
+      &:hover,
+      &:focus {
+        transform: translateY(-0.2rem);
+        box-shadow: $box-shadow-2;
+        @include projects-reveal;
+      }
+
+      @media only screen and (hover: none) {
+        @include projects-reveal;
+      }
+
+      /* Moving background on projects hover */
+      /* Not a generic mixin */
+      @mixin projects-moving-background($color-0, $color-1) {
+        background-image: linear-gradient(
+          120deg,
+          $blue-2 0,
+          $blue-4 50%,
+          $color-0 50%,
+          $color-1 100%
+        );
+        background-size: 300%;
+
+        &:hover,
+        &:focus {
+          background-position: 100%;
+        }
+
+        @media only screen and (hover: none) {
+          background-position: 100%;
+        }
+      }
+
+      &.projects__item--ateliers {
+        grid-area: ateliers;
+        @include projects-moving-background($ateliers-0, $ateliers-1);
+      }
+
+      &.projects__item--aouf {
+        grid-area: aouf;
+        @include projects-moving-background($aouf-0, $aouf-1);
+      }
+
+      &.projects__item--wecashup {
+        grid-area: wecashup;
+        @include projects-moving-background($wecashup-0, $wecashup-1);
       }
     }
 
@@ -724,9 +850,9 @@
         transform: translateY(0);
       }
 
-      &>* {
+      & > * {
         opacity: 0;
-        transition: opacity .2s ease-out;
+        transition: opacity 0.2s ease-out;
       }
     }
 
@@ -738,21 +864,21 @@
         "logo        preview"
         "description preview"
         ".           preview";
-      padding: 4rem;
-      gap: 2rem;
+      padding: 6rem;
+      gap: 6rem;
 
       &::before {
         display: none;
       }
 
-      &>* {
+      & > * {
         opacity: 1;
       }
 
       .projects__logo {
         grid-area: logo;
 
-        &>img {
+        & > img {
           width: 100%;
           height: 100%;
 
@@ -761,11 +887,14 @@
           }
         }
 
-        &--ateliers {}
+        &--ateliers {
+        }
 
-        &--aouf {}
+        &--aouf {
+        }
 
-        &--wecashup {}
+        &--wecashup {
+        }
       }
 
       .projects__keyword {
@@ -775,15 +904,18 @@
       .projects__description {
         grid-area: description;
 
-        &--ateliers {}
+        &--ateliers {
+        }
 
-        &--aouf {}
+        &--aouf {
+        }
 
-        &--wecashup {}
+        &--wecashup {
+        }
       }
 
       .projects__subheading {
-        margin-bottom: .2rem;
+        margin-bottom: 0.2rem;
       }
 
       .projects__preview {
@@ -792,43 +924,94 @@
         position: relative;
         width: 100%;
         height: 100%;
-
-        background: orangered;
-
-        &>img {
-          position: absolute;
-        }
-
-        &--ateliers {}
-
-        &--aouf {}
-
-        &--wecashup {}
       }
 
+      .projects__image {
+        position: absolute;
+
+        box-shadow: $box-shadow-1;
+        transition: all 0.1s ease-out;
+
+        &:hover {
+          transform: scale(1.05);
+          z-index: 2;
+          box-shadow: $box-shadow-2;
+        }
+
+        &--ateliers {
+          width: 100%;
+
+          &-1 {
+            @extend .projects__image--ateliers;
+          }
+        }
+
+        &--aouf {
+          width: 100%;
+
+          &-1 {
+            @extend .projects__image--aouf;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            &:hover {
+              transform: translate(-50%, -50%) scale(1.01);
+            }
+          }
+        }
+
+        &--wecashup {
+          width: 40%;
+
+          &-1 {
+            @extend .projects__image--wecashup;
+            top: 10%;
+            z-index: 1;
+          }
+
+          &-2 {
+            @extend .projects__image--wecashup;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 0;
+
+            &:hover {
+              transform: translate(-50%, -50%) scale(1.01);
+            }
+          }
+
+          &-3 {
+            @extend .projects__image--wecashup;
+            bottom: 10%;
+            right: 0;
+            z-index: 1;
+          }
+        }
+      }
     }
-
   }
-
 }
 
 // Contact section
 .contact {
   display: flex;
+  align-items: center;
 
   background: $blueGrey-8;
   box-shadow: inset $box-shadow-0;
   padding: 2rem $gutter-1;
 
-  @include respond(to, 600px) {
-    justify-items: space-between;
+  @include respond(to, 700px) {
+    justify-content: space-between;
   }
 
-  @include respond(to, 500px) {
-    flex-direction: column;
-    align-items: center;
-    align-content: center;
-  }
+  // @include respond(to, 500px) {
+  //   flex-direction: column;
+  //   align-items: center;
+  //   align-content: center;
+  // }
 
   &__link {
     display: flex;
@@ -838,6 +1021,7 @@
     color: $blueGrey-0;
     font-size: 1.6rem;
     line-height: 1;
+    white-space: nowrap;
     width: max-content;
     text-decoration: none;
     padding: 0.8rem 1.4rem;
@@ -845,9 +1029,9 @@
     box-shadow: $box-shadow-0;
     transition: all 0.2s ease-out;
 
-    @include respond(to, 500px) {
-      margin-bottom: 1.6rem;
-    }
+    // @include respond(to, 700px) {
+    //   margin-bottom: 1.6rem;
+    // }
 
     &:hover,
     &:link:hover,
@@ -857,7 +1041,7 @@
       transform: translateY(-0.2rem);
       box-shadow: $box-shadow-1;
 
-      &>.contact__link-icon {
+      & > .contact__link-icon {
         fill: $blueGrey-9;
       }
     }
@@ -868,13 +1052,13 @@
       @extend .contact__link;
       margin-right: 2rem;
 
-      @include respond(to, 600px) {
+      @include respond(to, 700px) {
         margin-right: auto;
       }
 
-      @include respond(to, 500px) {
-        margin-right: 0;
-      }
+      // @include respond(to, 700px) {
+      //   margin-right: 0;
+      // }
     }
 
     &--mail,
@@ -883,9 +1067,9 @@
       @extend .contact__link;
       margin-right: auto;
 
-      @include respond(to, 500px) {
-        margin-right: 0;
-      }
+      // @include respond(to, 700px) {
+      //   margin-right: 0;
+      // }
     }
   }
 
@@ -902,8 +1086,22 @@
     align-items: center;
     transition: all 0.2s ease-out;
 
+    &--github {
+      @extend .contact__social;
+    }
+
+    &--linkedin {
+      @extend .contact__social;
+
+      margin-left: 1.6rem;
+
+      @include respond(to, 700px) {
+        margin-left: auto;
+      }
+    }
+
     &:hover {
-      &>.contact__social-icon {
+      .contact__social-icon {
         fill: $yellow-3;
       }
     }
