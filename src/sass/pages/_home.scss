@@ -860,11 +860,10 @@
     &--full-screen {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      grid-template-rows: 8rem max-content 1fr;
+      grid-template-rows: 8rem calc(100vh - 30rem);
       grid-template-areas:
         "logo        preview"
-        "description preview"
-        ".           preview";
+        "description preview";
       padding: 8rem $gutter-1;
       gap: 6rem;
 
@@ -878,7 +877,8 @@
 
       .projects__close {
         position: absolute;
-        right: 0;
+        right: 2rem;
+        top: 2rem;
 
         border: none;
         background-color: transparent;
@@ -935,7 +935,8 @@
 
       .projects__description {
         grid-area: description;
-        overflow-y: scroll;
+
+        overflow-y: auto;
 
         &--ateliers {
         }
@@ -963,13 +964,6 @@
         position: absolute;
 
         box-shadow: $box-shadow-1;
-        transition: all 0.1s ease-out;
-
-        &:hover {
-          transform: scale(1.05);
-          z-index: 2;
-          box-shadow: $box-shadow-2;
-        }
 
         &--ateliers {
           width: 100%;
@@ -987,15 +981,18 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-
-            &:hover {
-              transform: translate(-50%, -50%) scale(1.01);
-            }
           }
         }
 
         &--wecashup {
           width: 40%;
+
+          &:hover {
+            transition: all 0.1s ease-out;
+            transform: scale(1.05);
+            z-index: 2;
+            box-shadow: $box-shadow-2;
+          }
 
           &-1 {
             @extend .projects__image--wecashup;
@@ -1031,13 +1028,14 @@
 .contact {
   display: flex;
   align-items: center;
+  justify-content: space-between;
 
   background: $blueGrey-8;
   box-shadow: inset $box-shadow-0;
   padding: 2rem $gutter-1;
 
   @include respond(to, 700px) {
-    justify-content: space-between;
+    flex-direction: column;
   }
 
   // @include respond(to, 500px) {
@@ -1045,6 +1043,16 @@
   //   align-items: center;
   //   align-content: center;
   // }
+
+  &__links {
+    display: flex;
+
+    @include respond(to, 700px) {
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 1rem;
+    }
+  }
 
   &__link {
     display: flex;
@@ -1061,10 +1069,6 @@
     border-radius: 10rem;
     box-shadow: $box-shadow-0;
     transition: all 0.2s ease-out;
-
-    // @include respond(to, 700px) {
-    //   margin-bottom: 1.6rem;
-    // }
 
     &:hover,
     &:link:hover,
@@ -1086,12 +1090,9 @@
       margin-right: 2rem;
 
       @include respond(to, 700px) {
-        margin-right: auto;
+        margin-right: 0;
+        margin-bottom: 1rem;
       }
-
-      // @include respond(to, 700px) {
-      //   margin-right: 0;
-      // }
     }
 
     &--mail,
@@ -1114,6 +1115,10 @@
     transition: inherit;
   }
 
+  &__socials {
+    display: flex;
+  }
+
   &__social {
     display: flex;
     align-items: center;
@@ -1128,9 +1133,9 @@
 
       margin-left: 1.6rem;
 
-      @include respond(to, 700px) {
-        margin-left: auto;
-      }
+      // @include respond(to, 700px) {
+      //   margin-left: auto;
+      // }
     }
 
     &:hover {

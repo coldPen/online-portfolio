@@ -64,7 +64,6 @@ import "./sass/main.scss";
 
         setTimeout(() => {
           tile.classList.remove(`projects__item--grid`);
-          console.log(Array.from(tile.classList));
           tile.classList.add(`projects__item--full-screen`);
         }, 200);
       }, 4);
@@ -109,7 +108,7 @@ import "./sass/main.scss";
 /* For development purposes only */
 // (() => {
 //   const projects = [`ateliers`, `aouf`, `wecashup`];
-//   const tile = document.getElementById(projects[0]);
+//   const tile = document.getElementById(projects[1]);
 //   tile.scrollIntoView();
 //   tile.click();
 // })();
