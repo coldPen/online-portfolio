@@ -74,10 +74,12 @@ import "./sass/main.scss";
       const closeProject = () => {
         closeButton.removeEventListener(`click`, closeProject);
 
-        tile.classList.remove(`projects__item--full-screen`);
-        tile.classList.add(`projects__item--grid`);
+        tile.classList.add(`projects__item--closing`);
 
         setTimeout(() => {
+          tile.classList.remove(`projects__item--full-screen`);
+          tile.classList.add(`projects__item--grid`);
+
           tile.classList.remove(`projects__item--active`);
 
           setTimeout(() => {
@@ -88,9 +90,11 @@ import "./sass/main.scss";
             tile.classList.remove(`projects__item--selected`);
             styleSheet.deleteRule(itemSelectedIndex);
 
+            tile.classList.remove(`projects__item--closing`);
+
             tile.addEventListener(`click`, openTile);
             tile.addEventListener(`keypress`, openTileOnEnter);
-          }, 4);
+          }, 200);
         }, 200);
       };
 

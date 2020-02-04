@@ -495,10 +495,21 @@
       box-shadow: $box-shadow-1;
       overflow: hidden;
       cursor: pointer;
-      // Item will take roughly 200ms to go full-screen
       transition: all 0.2s ease-out;
 
       position: relative;
+
+      background-color: rgba($blueGrey-9, 0);
+      background-size: 300%;
+
+      &:hover,
+      &:focus {
+        background-position: 100%;
+      }
+
+      @media only screen and (hover: none) {
+        background-position: 100%;
+      }
 
       &::before {
         content: "";
@@ -506,6 +517,7 @@
         width: 100%;
         height: 100%;
         background: $blueGrey-9;
+        // background: orangered;
         z-index: 1;
         opacity: 0;
         // A short enough transition blocks view of children moving with the container
@@ -784,40 +796,37 @@
       }
 
       /* Moving background on projects hover */
-      /* Not a generic mixin */
-      @mixin projects-moving-background($color-0, $color-1) {
+      &.projects__item--ateliers {
+        grid-area: ateliers;
         background-image: linear-gradient(
           120deg,
           $blue-2 0,
           $blue-4 50%,
-          $color-0 50%,
-          $color-1 100%
+          $ateliers-0 50%,
+          $ateliers-1 100%
         );
-        background-size: 300%;
-
-        &:hover,
-        &:focus {
-          background-position: 100%;
-        }
-
-        @media only screen and (hover: none) {
-          background-position: 100%;
-        }
-      }
-
-      &.projects__item--ateliers {
-        grid-area: ateliers;
-        @include projects-moving-background($ateliers-0, $ateliers-1);
       }
 
       &.projects__item--aouf {
         grid-area: aouf;
-        @include projects-moving-background($aouf-0, $aouf-1);
+        background-image: linear-gradient(
+          120deg,
+          $blue-2 0,
+          $blue-4 50%,
+          $aouf-0 50%,
+          $aouf-1 100%
+        );
       }
 
       &.projects__item--wecashup {
         grid-area: wecashup;
-        @include projects-moving-background($wecashup-0, $wecashup-1);
+        background-image: linear-gradient(
+          120deg,
+          $blue-2 0,
+          $blue-4 50%,
+          $wecashup-0 50%,
+          $wecashup-1 100%
+        );
       }
     }
 
@@ -825,13 +834,25 @@
       position: fixed;
       cursor: auto;
 
+      box-shadow: $box-shadow-4;
+
+      background-color: rgba($blueGrey-9, 1);
+
+      &.projects__item--ateliers {
+        background-image: none;
+      }
+
+      &.projects__item--aouf {
+        background-image: none;
+      }
+
+      &.projects__item--wecashup {
+        background-image: none;
+      }
+
+      transition: all 0.2s ease-out;
+
       &::before {
-        content: "";
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        background: $blueGrey-9;
-        z-index: 1;
         opacity: 1;
       }
     }
@@ -843,7 +864,7 @@
       left: 0;
       border-radius: 0;
 
-      background: $blueGrey-9;
+      // background: orangered;
       z-index: 2;
 
       &:hover,
@@ -1019,6 +1040,16 @@
             z-index: 1;
           }
         }
+      }
+    }
+
+    &--closing {
+      &::before {
+        display: block;
+      }
+      & > * {
+        opacity: 0;
+        // transition: opacity 0.2s ease-out;
       }
     }
   }
