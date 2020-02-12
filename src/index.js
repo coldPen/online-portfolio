@@ -110,9 +110,9 @@ import "./sass/main.scss";
 })();
 
 /* For development purposes only */
-// (() => {
-//   const projects = [`ateliers`, `aouf`, `wecashup`];
-//   const tile = document.getElementById(projects[1]);
-//   tile.scrollIntoView();
-//   tile.click();
-// })();
+(() => {
+  const projects = [`ateliers`, `aouf`, `wecashup`];
+  const tile = document.getElementById(projects[0]);
+  tile.scrollIntoView();
+  tile.click();
+})();

@@ -902,6 +902,15 @@
       padding: 8rem $gutter-1;
       gap: 6rem;
 
+      @include respond(to, 700px) {
+        grid-template-columns: auto;
+        grid-template-rows: 8rem min-content min-content;
+        grid-template-areas:
+          "preview    "
+          "logo       "
+          "description";
+      }
+
       &::before {
         display: none;
       }
@@ -998,18 +1007,22 @@
       .projects__image {
         position: absolute;
 
-        box-shadow: $box-shadow-1;
-
         &--ateliers {
-          width: 100%;
-
           &-1 {
-            @extend .projects__image--ateliers;
+            display: none;
+          }
+          &-2 {
+            width: 100%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            filter: drop-shadow($simple-shadow-1);
           }
         }
 
         &--aouf {
           width: 100%;
+          box-shadow: $box-shadow-1;
 
           &-1 {
             @extend .projects__image--aouf;
@@ -1021,6 +1034,7 @@
 
         &--wecashup {
           width: 40%;
+          box-shadow: $box-shadow-1;
 
           &:hover {
             transition: all 0.1s ease-out;
