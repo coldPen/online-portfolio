@@ -62,6 +62,10 @@ import "./sass/main.scss";
       setTimeout(() => {
         tile.classList.add(`projects__item--active`);
 
+        const tileChildren = JSON.parse(JSON.stringify(tile.children));
+        while (tile.firstChild) tile.removeChild(tile.firstChild);
+        console.log(tileChildren);
+
         setTimeout(() => {
           tile.classList.remove(`projects__item--grid`);
           tile.classList.add(`projects__item--full-screen`);
@@ -71,8 +75,8 @@ import "./sass/main.scss";
       /* Make the tile closable with a button */
       const closeButton = document.getElementById(`close-${project}`);
 
-      const closeProject = () => {
-        closeButton.removeEventListener(`click`, closeProject);
+      const closeTile = () => {
+        closeButton.removeEventListener(`click`, closeTile);
 
         tile.classList.add(`projects__item--closing`);
 
@@ -98,7 +102,7 @@ import "./sass/main.scss";
         }, 200);
       };
 
-      closeButton.addEventListener(`click`, closeProject);
+      closeButton.addEventListener(`click`, closeTile);
     };
     tile.addEventListener(`click`, openTile);
 
@@ -110,9 +114,9 @@ import "./sass/main.scss";
 })();
 
 /* For development purposes only */
-(() => {
-  const projects = [`ateliers`, `aouf`, `wecashup`];
-  const tile = document.getElementById(projects[0]);
-  tile.scrollIntoView();
-  tile.click();
-})();
+// (() => {
+//   const projects = [`ateliers`, `aouf`, `wecashup`];
+//   const tile = document.getElementById(projects[0]);
+//   tile.scrollIntoView();
+//   tile.click();
+// })();
