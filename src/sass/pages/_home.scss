@@ -902,20 +902,24 @@
       grid-template-columns: 1fr 1fr;
       grid-template-rows: 8rem calc(100vh - 30rem);
       grid-template-areas:
-        "logo        logo   "
-        "description preview";
+        "logo    logo       "
+        "preview description";
       padding: 8rem $gutter-1;
       gap: 6rem;
-      // height: 100vh;
-      // overflow-y: scroll;
+
+      overflow-y: auto;
 
       @include respond(to, 700px) {
-        grid-template-columns: auto;
-        grid-template-rows: min-content min-content min-content;
-        grid-template-areas:
-          "preview    "
-          "logo       "
-          "description";
+        // grid-template-columns: auto;
+        // grid-template-rows: 20rem repeat(2, min-content);
+        // grid-template-areas:
+        //   "preview    "
+        //   "logo       "
+        //   "description";
+        // gap: 3rem;
+
+        display: flex;
+        flex-direction: column;
       }
 
       &::before {
@@ -927,7 +931,7 @@
       }
 
       .projects__close {
-        position: absolute;
+        position: fixed;
         right: 2rem;
         top: 2rem;
 
@@ -961,6 +965,11 @@
       .projects__logo {
         grid-area: logo;
 
+        @include respond(to, 700px) {
+          height: 6rem;
+          margin-bottom: 3.8rem;
+        }
+
         & > img {
           width: 100%;
           height: 100%;
@@ -989,6 +998,10 @@
 
         overflow-y: auto;
 
+        @include respond(to, 700px) {
+          overflow-y: unset;
+        }
+
         &--ateliers {
         }
 
@@ -1003,20 +1016,47 @@
         margin-bottom: 0.2rem;
       }
 
+      .projects__link {
+        display: inline-block;
+        margin-top: 1.2rem;
+        padding: 1rem 2rem;
+        background: $blue-0;
+        color: $blueGrey-9;
+        @include nunito-bold;
+        text-decoration: none;
+        border-radius: 100px;
+        box-shadow: $box-shadow-0;
+        transition: all 0.2s ease-out;
+
+        &:hover {
+          background: $yellow-3;
+          box-shadow: $box-shadow-1;
+          transform: translateY(-0.2rem);
+        }
+      }
+
       .projects__preview {
         grid-area: preview;
 
         width: 100%;
         height: 100%;
 
+        @include respond(to, 700px) {
+          margin-bottom: 3.8rem;
+        }
+
         &--ateliers,
         &--aouf {
           display: flex;
-          align-items: center;
+          align-items: flex-start;
         }
 
         &--wecashup {
           position: relative;
+
+          @include respond(to, 700px) {
+            display: none;
+          }
         }
       }
 
@@ -1027,22 +1067,17 @@
           }
           &-2 {
             width: 100%;
-            // top: 50%;
-            // left: 50%;
-            // transform: translate(-50%, -50%);
             filter: drop-shadow($simple-shadow-1);
           }
         }
 
         &--aouf {
-          width: 100%;
-          box-shadow: $box-shadow-1;
-
           &-1 {
-            @extend .projects__image--aouf;
-            // top: 50%;
-            // left: 50%;
-            // transform: translate(-50%, -50%);
+            display: none;
+          }
+          &-2 {
+            width: 100%;
+            filter: drop-shadow($simple-shadow-1);
           }
         }
 
