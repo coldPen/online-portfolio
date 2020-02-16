@@ -59,18 +59,8 @@ import "./sass/main.scss";
       );
       body.classList.add(`no-scroll`);
 
-      // const tileChildren = Array.from(tile.children);
-
       setTimeout(() => {
         tile.classList.add(`projects__item--active`);
-
-        // const scrollWrapper = document.createElement(`div`);
-        // scrollWrapper.classList.add(`projects__scroll-wrapper`);
-
-        // tileChildren.forEach(child => scrollWrapper.appendChild(child));
-
-        // while (tile.firstChild) tile.removeChild(tile.firstChild);
-        // tile.appendChild(scrollWrapper);
 
         setTimeout(() => {
           tile.classList.remove(`projects__item--grid`);
@@ -87,9 +77,6 @@ import "./sass/main.scss";
         tile.classList.add(`projects__item--closing`);
 
         setTimeout(() => {
-          // while (tile.firstChild) tile.removeChild(tile.firstChild);
-          // tileChildren.forEach(child => tile.appendChild(child));
-
           tile.classList.remove(`projects__item--full-screen`);
           tile.classList.add(`projects__item--grid`);
 
@@ -125,7 +112,7 @@ import "./sass/main.scss";
 /* For development purposes only */
 (() => {
   const projects = [`ateliers`, `aouf`, `wecashup`];
-  const tile = document.getElementById(projects[2]);
+  const tile = document.getElementById(projects[0]);
   tile.scrollIntoView();
   tile.click();
 })();

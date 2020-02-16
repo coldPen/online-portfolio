@@ -909,17 +909,21 @@
 
       overflow-y: auto;
 
-      @include respond(to, 700px) {
-        // grid-template-columns: auto;
-        // grid-template-rows: 20rem repeat(2, min-content);
-        // grid-template-areas:
-        //   "preview    "
-        //   "logo       "
-        //   "description";
-        // gap: 3rem;
+      @include respond(to, 900px) {
+        grid-template-columns: auto;
+        grid-template-rows: repeat(3, min-content);
+        grid-template-areas:
+          "logo       "
+          "preview    "
+          "description";
+        gap: 3.8rem;
 
-        display: flex;
-        flex-direction: column;
+        &.projects__item--wecashup {
+          grid-template-rows: repeat(2, min-content);
+          grid-template-areas:
+            "logo       "
+            "description";
+        }
       }
 
       &::before {
@@ -965,14 +969,11 @@
       .projects__logo {
         grid-area: logo;
 
-        @include respond(to, 700px) {
-          height: 6rem;
-          margin-bottom: 3.8rem;
-        }
+        display: flex;
+        justify-content: center;
 
         & > img {
-          width: 100%;
-          height: 100%;
+          width: 20rem;
 
           &:first-child {
             display: none;
@@ -980,12 +981,15 @@
         }
 
         &--ateliers {
+          height: 6.4rem;
         }
 
         &--aouf {
+          height: 12.884rem;
         }
 
         &--wecashup {
+          height: 8.797rem;
         }
       }
 
@@ -998,8 +1002,9 @@
 
         overflow-y: auto;
 
-        @include respond(to, 700px) {
+        @include respond(to, 900px) {
           overflow-y: unset;
+          margin-bottom: 6rem;
         }
 
         &--ateliers {
@@ -1039,11 +1044,6 @@
         grid-area: preview;
 
         width: 100%;
-        height: 100%;
-
-        @include respond(to, 700px) {
-          margin-bottom: 3.8rem;
-        }
 
         &--ateliers,
         &--aouf {
@@ -1054,7 +1054,7 @@
         &--wecashup {
           position: relative;
 
-          @include respond(to, 700px) {
+          @include respond(to, 900px) {
             display: none;
           }
         }
