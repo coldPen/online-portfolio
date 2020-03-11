@@ -11,25 +11,9 @@ module.exports = {
         test: /\.html$/,
         use: {
           loader: "html-loader",
-          options: { attrs: ["img:src", "img:srcset", "use:xlink:href"] }
+          options: { attrs: [":src", ":srcset", ":xlink:href"] }
         }
       },
-      // {
-      //   test: /\.html$/,
-      //   use: {
-      //     loader: "html-loader-srcset",
-      //     options: { attrs: ["img:src", "img:srcset"] }
-      //   }
-      // },
-      // {
-      //   test: /\.(html)$/,
-      //   use: {
-      //     loader: "html-loader-srcset",
-      //     options: {
-      //       attrs: [":srcset"]
-      //     }
-      //   }
-      // },
       {
         test: /\.(png|jpg|gif|svg)$/,
         loader: "file-loader",
