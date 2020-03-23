@@ -8,10 +8,27 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.html$/,
-        use: {
-          loader: "html-loader",
-          options: { attrs: ["img:src", "use:xlink:href"] }
+        test: /\.html$/i,
+        loader: "html-loader",
+        options: {
+          attributes: {
+            list: [
+              {
+                // Tag name
+                tag: "img",
+                // Attribute name
+                attribute: "src",
+                // Type of processing, can be `src` or `scrset`
+                type: "src"
+              },
+              {
+                tag: "img",
+                attribute: "srcset",
+                type: "srcset"
+              },
+              { tag: "use", attribute: "xlink:href", type: "src" }
+            ]
+          }
         }
       },
       {

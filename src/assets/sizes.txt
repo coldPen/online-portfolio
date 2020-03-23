@@ -1,0 +1,35 @@
+ateliers-home.png
+    x2 : 436 * 248			[V]
+    x1 : 218 * 124			[V]
+
+ateliers-previews.png
+    x2 : 1450 * 700			[X]
+    x1 : 725 * 350			[X]
+
+_____________________
+
+aouf-landing.png
+    x2 : 436 * 382			[V]
+    x1 : 218 * 191			[V]
+
+aouf-previews.png
+    x2 : 1450 * 700			[X]
+    x1 : 725 * 350			[X]
+
+_____________________
+
+wecashup-form-1.png --home
+    x2 : 874 * 1240			[X]
+    x1 : 437 * 620			[X]
+
+wecashup-form-1.png --full-screen
+    x2 : 580 * 824			[X] Pas utile
+    x1 : 290 * 412			[X] Pas utile
+
+wecashup-form-2.png --full-screen
+    x2 : 580 * 786			[X]
+    x1 : 290 * 393			[V]
+
+wecashup-form-3.png --full-screen
+    x2 : 580 * 786			[X]
+    x1 : 290 * 393			[V]
